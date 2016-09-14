@@ -5,6 +5,6 @@ class Home extends CI_Controller {
      * Very first page of the web
      */
     public function index() {
-        echo 'hello word';
+        $this->load->view('home/home');
     }
 }
