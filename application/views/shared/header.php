@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <script type="text/javascript" src="js/vendor/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+    <?php echo base_url('/index'); ?>
 </head>
 
 <body>

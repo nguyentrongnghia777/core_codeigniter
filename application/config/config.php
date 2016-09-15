@@ -511,3 +511,21 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+
+/*
+| -------------------------------------------------------------------
+| Native Auto-load
+| -------------------------------------------------------------------
+|
+| Nothing to do with config/autoload.php, this allows PHP autoload to work
+| for base controllers and some third-party libraries.
+|
+| @see https://philsturgeon.uk/blog/2010/02/CodeIgniter-Base-Classes-Keeping-it-DRY/
+*/
+function __autoload($class)
+{
+    if(strpos($class, 'CI_') !== 0)
+    {
+        @include_once( APPPATH . 'abstract_class/'. $class . '.php' );
+    }
+}
