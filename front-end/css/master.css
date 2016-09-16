@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Nguyen Trong Nghia
+   ========================================================================== */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800);
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    font-size: 15px;
+    background: #fdfdfd;
+    font-family: "Open Sans", Tahoma, Arial, Sans-Serif;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+form {
+    margin: 0
+}
+a {
+	color: #333; 
+    cursor: pointer
+}
+a, a:focus {
+    outline: none;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+    color: #0076a1;
+}
+input, input:focus {
+    outline: none
+}
+#container .container {
+    max-width: 960px;
+    height: auto;
+}
+body,h1,h2,h3,h4,p,a {
+	font-family: 'Open Sans', sans-serif;
+}
+
+ /* ==========================================================================
+   Responsive CSS Landscape Tablet
+   ========================================================================== */
+@media only screen and (min-width: 960px) and (max-width: 1240px) {
+
+}
+
+
+/* ==========================================================================
+   Responsive CSS Portrait Tablet
+   ========================================================================== */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+}
+
+
+/* ==========================================================================
+   Responsive CSS Landscape Mobile
+   ========================================================================== */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+}
+
+
+/* ==========================================================================
+   Responsive CSS Portrait Mobile
+   ========================================================================== */
+@media only screen and (min-width: 100px) and (max-width: 479px) {
+
+}
