@@ -14,8 +14,8 @@ user_guide_src/cilexer/dist/*
 user_guide_src/cilexer/pycilexer.egg-info/*
 /vendor/
 
-env/*.env
-!env/*.sample.env
+application/config/database.php
+application/config/email.php
 
 # IDE Files
 #-------------------------
