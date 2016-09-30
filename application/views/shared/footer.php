@@ -2,7 +2,8 @@
         <!-- footer -->
         <footer>
             <section class="container">
-            	footer
+                <hr>
+            	<h1>footer</h1>
             </section>
         </footer>
         <!-- end footer -->

@@ -23,7 +23,17 @@
         <!-- header -->
         <header>
             <section class="container">
-                header
+                <h1>header</h1>
+                <p>
+                    <?php if ($user) { ?>
+                        <a href="<?=base_url('/profile/' . $user->username);?>"><?= $user->first_name ? $user->first_name . ' ' . $user->last_name : $user->username; ?></a> 
+                         | <a href="<?=base_url('/auth/logout');?>">Logout</a> 
+                        <?php if ($this->ion_auth->is_admin()) { ?>
+                         | <a href="<?=base_url('/admin/user');?>">Admin</a> 
+                        <?php } ?>
+                    <?php } ?>
+                </p>
+                <hr>
             </section>
         </header>
         <!-- end header -->
