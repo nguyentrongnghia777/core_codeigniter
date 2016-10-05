@@ -13,10 +13,9 @@
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="images/favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <script type="text/javascript" src="js/vendor/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="<?=base_url('front-end/css/bootstrap.min.css');?>">
+    <link rel="stylesheet" href="<?=base_url('front-end/css/bootstrap-theme.min.css');?>">
+    <link rel="stylesheet" href="<?=base_url('front-end/css/master.css');?>">
 </head>
 
 <body>

@@ -3,7 +3,7 @@
         <footer>
             <section class="container">
                 <hr>
-            	<h1>admin footer</h1>
+                <h1>admin footer</h1>
             </section>
         </footer>
         <!-- end footer -->

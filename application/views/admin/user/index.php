@@ -8,9 +8,9 @@
 
         <table class="table table-bordered table-hover" >
             <tr>
-                <th><?php echo lang('index_email_th');?></th>
                 <th><?php echo lang('index_fname_th');?></th>
                 <th><?php echo lang('index_lname_th');?></th>
+                <th><?php echo lang('index_email_th');?></th>                
                 <th><?php echo lang('index_groups_th');?></th>
                 <th><?php echo lang('index_status_th');?></th>
                 <th><?php echo lang('index_action_th');?></th>

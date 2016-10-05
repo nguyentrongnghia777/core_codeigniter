@@ -392,10 +392,10 @@ class User extends CI_Controller {
             if ($this->input->post('confirm') == 'yes')
             {
                 // do we have a valid request?
-                if ($this->_valid_csrf_nonce() === FALSE || $id != $this->input->post('id'))
-                {
-                    show_error($this->lang->line('error_csrf'));
-                }
+                // if ($this->_valid_csrf_nonce() === FALSE || $id != $this->input->post('id'))
+                // {
+                //     show_error($this->lang->line('error_csrf'));
+                // }
 
                 // do we have the right userlevel?
                 if ($this->ion_auth->logged_in() && $this->ion_auth->is_admin())
@@ -542,10 +542,10 @@ class User extends CI_Controller {
         if (isset($_POST) && !empty($_POST))
         {
             // do we have a valid request?
-            if ($this->_valid_csrf_nonce() === FALSE || $id != $this->input->post('id'))
-            {
-                show_error($this->lang->line('error_csrf'));
-            }
+            // if ($this->_valid_csrf_nonce() === FALSE || $id != $this->input->post('id'))
+            // {
+            //     show_error($this->lang->line('error_csrf'));
+            // }
 
             // update the password if it was posted
             if ($this->input->post('password'))
@@ -691,7 +691,7 @@ class User extends CI_Controller {
                 // check to see if we are creating the group
                 // redirect them back to the admin page
                 $this->session->set_flashdata('message', $this->ion_auth->messages());
-                redirect("auth", 'refresh');
+                redirect("admin/user", 'refresh');
             }
         }
         else
@@ -713,7 +713,7 @@ class User extends CI_Controller {
                 'value' => $this->form_validation->set_value('description'),
             );
 
-            $this->_render_page('auth/create_group', $this->data);
+            $this->_render_page('admin/user/create_group', $this->data);
         }
     }
 
@@ -752,7 +752,7 @@ class User extends CI_Controller {
                 {
                     $this->session->set_flashdata('message', $this->ion_auth->errors());
                 }
-                redirect("auth", 'refresh');
+                redirect("admin/user", 'refresh');
             }
         }
 
@@ -778,7 +778,7 @@ class User extends CI_Controller {
             'value' => $this->form_validation->set_value('group_description', $group->description),
         );
 
-        $this->_render_page('auth/edit_group', $this->data);
+        $this->_render_page('admin/user/edit_group', $this->data);
     }
 
 
