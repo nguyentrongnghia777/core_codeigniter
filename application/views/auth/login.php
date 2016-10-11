@@ -1,4 +1,4 @@
-<?php $this->load->view('shared/auth_header', ['title' => 'Login']) ?>
+<?php $this->load->view('template/auth_header', ['title' => 'Login']) ?>
 <div class="page-login">
     <div class="container">
         <h1><?php echo lang('login_heading');?></h1>
@@ -31,4 +31,4 @@
         <p><a href="forgot_password"><?php echo lang('login_forgot_password');?></a></p>
     </div>
 </div>
-<?php $this->load->view('shared/auth_footer') ?>
+<?php $this->load->view('template/auth_footer') ?>

@@ -1,4 +1,4 @@
-<?php $this->load->view('shared/admin_header', ['title' => 'Create Group']) ?>
+<?php $this->load->view('admin/template/header', ['title' => 'Create Group']) ?>
 <div class="page-create-group">
     <div class="container">    
         <h1><?php echo lang('create_group_heading');?></h1>
@@ -23,4 +23,4 @@
         <?php echo form_close();?>
     </div>
 </div>
-<?php $this->load->view('shared/admin_footer') ?>
+<?php $this->load->view('admin/template/footer') ?>

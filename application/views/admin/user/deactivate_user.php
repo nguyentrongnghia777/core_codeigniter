@@ -1,4 +1,4 @@
-<?php $this->load->view('shared/admin_header', ['title' => 'Deactive User']) ?>
+<?php $this->load->view('admin/template/header', ['title' => 'Deactive User']) ?>
 <div class="page-deactive-user">
     <div class="container">    
         <h1><?php echo lang('deactivate_heading');?></h1>
@@ -21,4 +21,4 @@
         <?php echo form_close();?>
     </div>
 </div>
-<?php $this->load->view('shared/admin_footer') ?>
+<?php $this->load->view('admin/template/footer') ?>

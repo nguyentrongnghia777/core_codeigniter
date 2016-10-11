@@ -1,4 +1,4 @@
-<?php $this->load->view('shared/admin_header', ['title' => 'Edit Group']) ?>
+<?php $this->load->view('admin/template/header', ['title' => 'Edit Group']) ?>
 <div class="page-edit-group">
     <div class="container">
         <h1><?php echo lang('edit_group_heading');?></h1>
@@ -23,4 +23,4 @@
         <?php echo form_close();?>
     </div>
 </div>
-<?php $this->load->view('shared/admin_footer') ?>
+<?php $this->load->view('admin/template/footer') ?>

@@ -1,4 +1,4 @@
-<?php $this->load->view('shared/auth_header', ['title' => 'Forgot password']) ?>
+<?php $this->load->view('template/auth_header', ['title' => 'Forgot password']) ?>
 <div class="page-forgot-password">
     <div class="container">    
         <h1><?php echo lang('reset_password_heading');?></h1>
@@ -25,4 +25,4 @@
         <?php echo form_close();?>
     </div>
 </div>
-<?php $this->load->view('shared/auth_footer') ?>
+<?php $this->load->view('template/auth_footer') ?>

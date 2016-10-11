@@ -1,4 +1,4 @@
-<?php $this->load->view('shared/admin_header', ['title' => 'Edit User']) ?>
+<?php $this->load->view('admin/template/header', ['title' => 'Edit User']) ?>
 <div class="page-edit-user">
     <div class="container">
 
@@ -71,4 +71,4 @@
 
     </div>
 </div>
-<?php $this->load->view('shared/admin_footer') ?>
+<?php $this->load->view('admin/template/footer') ?>

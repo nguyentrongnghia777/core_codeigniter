@@ -1,4 +1,4 @@
-<?php $this->load->view('shared/admin_header', ['title' => 'Manage User']) ?>
+<?php $this->load->view('admin/template/header', ['title' => 'Manage User']) ?>
 <div class="page-user">
     <div class="container">
         <h1><?php echo lang('index_heading');?></h1>
@@ -34,4 +34,4 @@
         <p><?php echo anchor('admin/user/create_user', lang('index_create_user_link'))?> | <?php echo anchor('admin/user/create_group', lang('index_create_group_link'))?></p>
     </div>
 </div>
-<?php $this->load->view('shared/admin_footer') ?>
+<?php $this->load->view('admin/template/footer') ?>

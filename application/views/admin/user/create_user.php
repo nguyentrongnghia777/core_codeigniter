@@ -1,4 +1,4 @@
-<?php $this->load->view('shared/admin_header', ['title' => 'Create User']) ?>
+<?php $this->load->view('admin/template/header', ['title' => 'Create User']) ?>
 <div class="page-create-user">
     <div class="container">
 
@@ -62,4 +62,4 @@
 
     </div>
 </div>
-<?php $this->load->view('shared/admin_footer') ?>
+<?php $this->load->view('admin/template/footer') ?>
