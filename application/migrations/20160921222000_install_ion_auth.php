@@ -21,21 +21,21 @@ class Migration_Install_ion_auth extends CI_Migration
         $this->dbforge->add_key('id', TRUE);
         $this->dbforge->create_table(Constants_helper::TBL_GROUPS, FALSE, array('ENGINE' => 'MYISAM'));
 
-		// Dumping data for table 'groups'
-		$data = array(
-			array(
-				'id' => '1',
-				'name' => 'admin',
-				'description' => 'Administrator'
-			),
-			array(
-				'id' => '2',
-				'name' => 'members',
-				'description' => 'General User'
-			)
-		);
-		$this->db->insert_batch(Constants_helper::TBL_GROUPS, $data);
-		
+        // Dumping data for table 'groups'
+        $data = array(
+            array(
+                'id' => '1',
+                'name' => Constants_helper::ROLES_ADMIN,
+                'description' => 'Administrator'
+            ),
+            array(
+                'id' => '2',
+                'name' => Constants_helper::ROLES_MEMBER,
+                'description' => 'General User'
+            )
+        );
+        $this->db->insert_batch(Constants_helper::TBL_GROUPS, $data);
+
         // Drop table 'users' if it exists
         $this->dbforge->drop_table(Constants_helper::TBL_USERS, true);
 
@@ -102,29 +102,29 @@ class Migration_Install_ion_auth extends CI_Migration
                 'null' => TRUE
             ),
             'full_name' => $this->fields->small_text,
+            'avatar' => $this->fields->medium_text,
+            'facebook_id' => $this->fields->small_text,
+            'google_id' => $this->fields->small_text,
         ));
         $this->dbforge->add_key('id', TRUE);
         $this->dbforge->create_table(Constants_helper::TBL_USERS, FALSE, array('ENGINE' => 'MYISAM'));
 
-		// Dumping data for table 'users'
-		$data = array(
-			'id' => '1',
-			'ip_address' => '127.0.0.1',
-			'username' => 'administrator',
-			'password' => '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36',
-			'salt' => '',
-			'email' => 'admin@admin.com',
-			'activation_code' => '',
-			'forgotten_password_code' => NULL,
-			'created_on' => '1268889823',
-			'last_login' => '1268889823',
-			'active' => '1',
-			'first_name' => 'Admin',
-			'last_name' => 'istrator',
-			'company' => 'ADMIN',
-			'phone' => '0',
-		);
-		$this->db->insert(Constants_helper::TBL_USERS, $data);
+        // Dumping data for table 'users'
+        $data = array(
+            'id' => '1',
+            'ip_address' => '127.0.0.1',
+            'username' => 'administrator',
+            'password' => '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36',
+            'salt' => '',
+            'email' => 'admin@admin.com',
+            'activation_code' => '',
+            'forgotten_password_code' => NULL,
+            'created_on' => '1268889823',
+            'last_login' => '1268889823',
+            'active' => '1',
+            'full_name' => 'admin',
+        );
+        $this->db->insert(Constants_helper::TBL_USERS, $data);
 
         // Drop table 'users_groups' if it exists
         $this->dbforge->drop_table(Constants_helper::TBL_USERS_GROUPS, true);
@@ -138,20 +138,20 @@ class Migration_Install_ion_auth extends CI_Migration
         $this->dbforge->add_key('id', TRUE);
         $this->dbforge->create_table(Constants_helper::TBL_USERS_GROUPS, FALSE, array('ENGINE' => 'MYISAM'));
 
-		// Dumping data for table 'users_groups'
-		$data = array(
-			array(
-				'id' => '1',
-				'user_id' => '1',
-				'group_id' => '1',
-			),
-			array(
-				'id' => '2',
-				'user_id' => '1',
-				'group_id' => '2',
-			)
-		);
-		$this->db->insert_batch(Constants_helper::TBL_USERS_GROUPS, $data);
+        // Dumping data for table 'users_groups'
+        $data = array(
+            array(
+                'id' => '1',
+                'user_id' => '1',
+                'group_id' => '1',
+            ),
+            array(
+                'id' => '2',
+                'user_id' => '1',
+                'group_id' => '2',
+            )
+        );
+        $this->db->insert_batch(Constants_helper::TBL_USERS_GROUPS, $data);
 
         // Drop table 'login_attempts' if it exists
         $this->dbforge->drop_table(Constants_helper::TBL_LOGIN_ATTEMPTS, true);
