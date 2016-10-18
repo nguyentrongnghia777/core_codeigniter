@@ -29,7 +29,7 @@ $lang['login_forgot_password'] = 'Quên mật khẩu?';
 // Index
 $lang['index_heading']           = 'Tài khoản';
 $lang['index_subheading']        = 'Danh sách tài khoản.';
-$lang['index_fname_th']          = 'Tên';
+$lang['index_fname_th']          = 'Họ Tên';
 $lang['index_lname_th']          = 'Họ';
 $lang['index_email_th']          = 'Email';
 $lang['index_groups_th']         = 'Nhóm';

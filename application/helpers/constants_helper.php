@@ -12,6 +12,7 @@ class Constants_helper
     const TBL_USERS = 'users';
     const TBL_USERS_GROUPS = 'users_groups';
     const TBL_LOGIN_ATTEMPTS = 'login_attempts';
+    const TBL_BLOGS = 'blogs';
 
     // Roles
     const ROLES_MEMBER = 'member';

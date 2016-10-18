@@ -2,15 +2,14 @@
 
 class Migration_Install_ion_auth extends CI_Migration
 {
-    function __construct()
-    {
+    function __construct() {
         $this->load->helper('db_helper');
         $this->fields = new Db_helper();
     }
-    public function up()
-    {
+
+    public function up() {
         // Drop table 'groups' if it exists
-        $this->dbforge->drop_table(Constants_helper::TBL_GROUPS, true);
+        $this->dbforge->drop_table(Constants_helper::TBL_GROUPS, TRUE);
 
         // Table structure for table 'groups'
         $this->dbforge->add_field(array(
@@ -37,7 +36,7 @@ class Migration_Install_ion_auth extends CI_Migration
         $this->db->insert_batch(Constants_helper::TBL_GROUPS, $data);
 
         // Drop table 'users' if it exists
-        $this->dbforge->drop_table(Constants_helper::TBL_USERS, true);
+        $this->dbforge->drop_table(Constants_helper::TBL_USERS, TRUE);
 
         // Table structure for table 'users'
         $this->dbforge->add_field(array(
@@ -101,6 +100,11 @@ class Migration_Install_ion_auth extends CI_Migration
                 'unsigned' => TRUE,
                 'null' => TRUE
             ),
+            'phone' => array(
+                'type' => 'VARCHAR',
+                'constraint' => '20',
+                'null' => TRUE
+            ),
             'full_name' => $this->fields->small_text,
             'avatar' => $this->fields->medium_text,
             'facebook_id' => $this->fields->small_text,
@@ -127,7 +131,7 @@ class Migration_Install_ion_auth extends CI_Migration
         $this->db->insert(Constants_helper::TBL_USERS, $data);
 
         // Drop table 'users_groups' if it exists
-        $this->dbforge->drop_table(Constants_helper::TBL_USERS_GROUPS, true);
+        $this->dbforge->drop_table(Constants_helper::TBL_USERS_GROUPS, TRUE);
 
         // Table structure for table 'users_groups'
         $this->dbforge->add_field(array(
@@ -154,7 +158,7 @@ class Migration_Install_ion_auth extends CI_Migration
         $this->db->insert_batch(Constants_helper::TBL_USERS_GROUPS, $data);
 
         // Drop table 'login_attempts' if it exists
-        $this->dbforge->drop_table(Constants_helper::TBL_LOGIN_ATTEMPTS, true);
+        $this->dbforge->drop_table(Constants_helper::TBL_LOGIN_ATTEMPTS, TRUE);
 
         // Table structure for table 'login_attempts'
         $this->dbforge->add_field(array(
@@ -171,11 +175,10 @@ class Migration_Install_ion_auth extends CI_Migration
 
     }
 
-    public function down()
-    {
-        $this->dbforge->drop_table(Constants_helper::TBL_USERS, true);
-        $this->dbforge->drop_table(Constants_helper::TBL_GROUPS, true);
-        $this->dbforge->drop_table(Constants_helper::TBL_USERS_GROUPS, true);
-        $this->dbforge->drop_table(Constants_helper::TBL_LOGIN_ATTEMPTS, true);
+    public function down() {
+        $this->dbforge->drop_table(Constants_helper::TBL_USERS, TRUE);
+        $this->dbforge->drop_table(Constants_helper::TBL_GROUPS, TRUE);
+        $this->dbforge->drop_table(Constants_helper::TBL_USERS_GROUPS, TRUE);
+        $this->dbforge->drop_table(Constants_helper::TBL_LOGIN_ATTEMPTS, TRUE);
     }
 }

@@ -26,7 +26,7 @@
                 <h1>header</h1>
                 <p>
                     <?php if ($user) { ?>
-                        <a href="<?=base_url('/profile/' . $user->username);?>"><?= $user->first_name ? $user->first_name . ' ' . $user->last_name : $user->username; ?></a> 
+                        <a href="<?=base_url('/profile/' . $user->username);?>"><?= $user->full_name ? $user->full_name : $user->username; ?></a>
                         <?php if ($this->ion_auth->is_admin()) { ?>
                          | <a href="<?=base_url('/admin/user');?>">Admin</a> 
                         <?php } ?>
