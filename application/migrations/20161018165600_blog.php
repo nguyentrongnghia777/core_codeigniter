@@ -7,7 +7,7 @@ class Migration_Blog extends CI_Migration
         $this->fields = new Db_helper();
     }
 
-    function up() {
+    public function up() {
         // Drop table 'blogs' if it exists
         $this->dbforge->drop_table(Constants_helper::TBL_BLOGS, TRUE);
 
@@ -24,11 +24,11 @@ class Migration_Blog extends CI_Migration
         $this->dumping_data_blogs();
     }
 
-    function down() {
+    public function down() {
         $this->dbforge->drop_table(Constants_helper::TBL_BLOGS, TRUE);
     }
 
-    function dumping_data_blogs() {
+    private function dumping_data_blogs() {
         $data = [];
         for ($i = 0; $i < 20; $i++) {
             array_push($data, array(

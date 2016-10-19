@@ -3,7 +3,7 @@
 * Name:  Auth Lang - Vietnamese
 *
 * Author: Trung Dinh Quang
-* 		  trungdq88@gmail.com
+*         trungdq88@gmail.com
 *         @trungdq88
 *
 * Location: http://github.com/benedmunds/ion_auth/
@@ -15,12 +15,12 @@
 */
 
 // Errors
-$lang['error_csrf'] = 'Có lỗi xảy ra trong quá trình đăng nhập.';
+$lang['error_csrf'] = 'Phát hiện truy vấn lạ. Vui lòng thực hiện lại thao tác.';
 
 // Login
 $lang['login_heading']         = 'Đăng nhập';
-$lang['login_subheading']      = 'Đăng nhập bằng email.';
-$lang['login_identity_label']  = 'Email';
+$lang['login_subheading']      = 'Đăng nhập bằng tài khoản Hợp Âm Chuẩn';
+$lang['login_identity_label']  = 'Tên tài khoản hoặc Email';
 $lang['login_password_label']  = 'Mật khẩu';
 $lang['login_remember_label']  = 'Nhớ mật khẩu';
 $lang['login_submit_btn']      = 'Đăng nhập';
@@ -29,14 +29,14 @@ $lang['login_forgot_password'] = 'Quên mật khẩu?';
 // Index
 $lang['index_heading']           = 'Tài khoản';
 $lang['index_subheading']        = 'Danh sách tài khoản.';
-$lang['index_fname_th']          = 'Họ Tên';
+$lang['index_fname_th']          = 'Tên';
 $lang['index_lname_th']          = 'Họ';
 $lang['index_email_th']          = 'Email';
 $lang['index_groups_th']         = 'Nhóm';
 $lang['index_status_th']         = 'Trạng thái';
 $lang['index_action_th']         = 'Tác vụ';
-$lang['index_active_link']       = 'Kích hoạt';
-$lang['index_inactive_link']     = 'Khoá';
+$lang['index_active_link']       = 'Đã kích hoạt';
+$lang['index_inactive_link']     = 'Đã khoá';
 $lang['index_create_user_link']  = 'Tạo tài khoản mới';
 $lang['index_create_group_link'] = 'Tạo nhóm mới';
 
@@ -52,18 +52,17 @@ $lang['deactivate_validation_user_id_label'] = 'ID Tài khoản';
 // Create User
 $lang['create_user_heading']                           = 'Tạo tài khoản';
 $lang['create_user_subheading']                        = 'Vui lòng nhập các thông tin cần thiết sau.';
-$lang['create_user_fname_label']                       = 'Tên:';
+$lang['create_user_username_label']                    = 'Tên tài khoản:';
+$lang['create_user_full_name_label']                   = 'Tên đầy đủ:';
 $lang['create_user_lname_label']                       = 'Họ:';
-$lang['create_user_identity_label']                    = 'Identity:';
 $lang['create_user_company_label']                     = 'Công ty:';
 $lang['create_user_email_label']                       = 'Email:';
 $lang['create_user_phone_label']                       = 'Điện thoại:';
 $lang['create_user_password_label']                    = 'Mật khẩu:';
 $lang['create_user_password_confirm_label']            = 'Xác nhận mật khẩu:';
 $lang['create_user_submit_btn']                        = 'Tạo tài khoản';
-$lang['create_user_validation_fname_label']            = 'Tên';
-$lang['create_user_validation_lname_label']            = 'Họ';
-$lang['create_user_validation_identity_label']         = 'Identity';
+$lang['create_user_validation_username_label']         = 'Tên tài khoản';
+$lang['create_user_validation_full_name_label']        = 'Tên đầy đủ';
 $lang['create_user_validation_email_label']            = 'Email';
 $lang['create_user_validation_phone1_label']           = 'Số điện thoại (mã vùng)';
 $lang['create_user_validation_phone2_label']           = 'Số điện thoại (3 số đầu)';
@@ -131,9 +130,11 @@ $lang['forgot_password_heading']                 = 'Quên mật khẩu';
 $lang['forgot_password_subheading']              = 'Vui lòng nhập %s để nhận được email khôi phục mật khẩu.';
 $lang['forgot_password_email_label']             = '%s:';
 $lang['forgot_password_submit_btn']              = 'Xác nhận';
+$lang['forgot_password_validation_username_label']  = 'Tên tài khoản';
 $lang['forgot_password_validation_email_label']  = 'Email';
 $lang['forgot_password_username_identity_label'] = 'Tài khoản';
 $lang['forgot_password_email_identity_label']    = 'Email';
+$lang['forgot_password_username_not_found']         = 'Tên tài khoản không tồn tại.';
 $lang['forgot_password_email_not_found']         = 'Địa chỉ email không tồn tại.';
 
 // Reset Password
