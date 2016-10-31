@@ -75,11 +75,14 @@
                         <li >
                             <a href="/">Home</a>
                         </li>
-                        <li >
-                            <a href="/auth/login">Login</a>
-                        </li>
                         <li class="active">
-                            <a href="/auth/register">Register</a>
+                            <a href="<?=base_url('/auth/login');?>">Login</a>
+                        </li>
+                        <li >
+                            <a href="<?=base_url('/auth/register');?>">Register</a>
+                        </li>
+                        <li >
+                            <a href="<?=base_url('/auth/logout');?>">Logout</a>
                         </li>
                     </ul>
                     <!-- /.navbar-nav -->

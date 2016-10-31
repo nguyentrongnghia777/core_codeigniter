@@ -4930,3 +4930,9 @@ table.text-center th {
     white-space: normal !important;
   }
 }
+/**************************New code CSS*************************************/
+
+/* show messeger error form */
+.content-wrapper .section .container .color-information-form {
+  color: red;
+}
