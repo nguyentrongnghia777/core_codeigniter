@@ -1,34 +1,55 @@
-<?php $this->load->view('template/auth_header', ['title' => 'Login']) ?>
-<div class="page-login">
-    <div class="container">
-        <h1><?php echo lang('login_heading');?></h1>
-        <p><?php echo lang('login_subheading');?></p>
+        <?php $this->load->view('template/auth_header', ['title' => 'Login']) ?>
+        <div class="home">
+            <div class="home-inner">
+                <div class="container">
+                    <h1>
+                        Login Membership
+                    </h1>
+                </div>
+            </div>
+        </div>
 
-        <div id="infoMessage"><?php echo $message;?></div>
+        <div class="section">
+            <div class="container">
+                
+                <form action="/auth/register" method="post" class="form-horizontal">
+                    <input type="hidden" name="_token" value="6PMEsCzbtXBdcGUu3iCVmTaCcwl8qq9f90ElQezk">
 
-        <?php echo form_open("auth/login");?>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">E-Mail Address</label>
 
-        <p>
-            <?php echo lang('login_identity_label', 'identity');?>
-            <?php echo form_input($identity);?>
-        </p>
+                        <div class="col-md-7">
+                            <input type="email" class="form-control has-no-icon" name="email" value="">
+                        </div>
+                    </div>
 
-        <p>
-            <?php echo lang('login_password_label', 'password');?>
-            <?php echo form_input($password);?>
-        </p>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Password</label>
 
-        <p>
-            <?php echo lang('login_remember_label', 'remember');?>
-            <?php echo form_checkbox('remember', '1', FALSE, 'id="remember"');?>
-        </p>
+                        <div class="col-md-7">
+                            <input type="password" class="form-control has-no-icon" name="password">
+                        </div>
+                    </div>
 
 
-        <p><?php echo form_submit('submit', lang('login_submit_btn'));?></p>
+                    <div class="form-group">
+                        <div class="col-md-7 col-md-offset-3">
+                            <label class="checkbox">
+                                <input type="checkbox" name="enroll" value="yes" checked/>
+                                Also, subscribe me to the newsletter (very occasional e-mails).
+                            </label>
+                        </div>
+                    </div>
 
-        <?php echo form_close();?>
+                    <div class="form-group">
+                        <div class="col-md-7 col-md-offset-3">
+                            <button type="submit" class="btn btn-primary">
+                                Login
+                            </button>
+                        </div>
+                    </div>
+                </form>
 
-        <p><a href="forgot_password"><?php echo lang('login_forgot_password');?></a></p>
-    </div>
-</div>
-<?php $this->load->view('template/auth_footer') ?>
+            </div>
+        </div>
+        <?php $this->load->view('template/auth_footer') ?>
