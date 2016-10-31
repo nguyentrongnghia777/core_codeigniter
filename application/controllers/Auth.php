@@ -28,6 +28,12 @@ class Auth extends CI_Controller {
 		}
 	}
 
+	// register the user
+	public function register()
+	{
+		// new register function
+	}
+
 	// log the user in
 	public function login()
 	{
