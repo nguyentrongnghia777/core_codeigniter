@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-        <title>Almsaeed Studio</title>
+        <title><?= $title ?></title>
 
         <link href="<?= base_url('front-end/css/theme.css" rel="stylesheet') ?>">
 
@@ -57,39 +57,6 @@
             </div>
         </div>
 
-        <!-- Main Navigation Bar -->
-        <nav class="navbar navbar-default navbar-static-top transparent" role="navigation">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse-menu">
-                        <span class="sr-only">Toggle navigation</span>
-                        <i class="fa fa-bars"></i>
-                    </button>
-                    <a class="navbar-brand" href="/"><b>Almsaeed</b> Studio</a>
-                </div>
-                <!-- /.navbar-header -->
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="collapse-menu">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li >
-                            <a href="/">Home</a>
-                        </li>
-                        <li class="active">
-                            <a href="<?=base_url('/auth/login');?>">Login</a>
-                        </li>
-                        <li >
-                            <a href="<?=base_url('/auth/register');?>">Register</a>
-                        </li>
-                        <li >
-                            <a href="<?=base_url('/auth/logout');?>">Logout</a>
-                        </li>
-                    </ul>
-                    <!-- /.navbar-nav -->
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container -->
-        </nav><!--/.navbar-->
+       
         <!-- Main-content -->
         <div id="main-content">

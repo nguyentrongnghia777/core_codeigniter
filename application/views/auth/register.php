@@ -1,9 +1,9 @@
- <?php $this->load->view('template/auth_header', ['title' => 'Login']) ?>
+ <?php $this->load->view('template/auth_header', ['title' => 'Register']) ?>
         <div class="home">
             <div class="home-inner">
                 <div class="container">
                     <h1>
-                        Login Membership
+                        Register Membership
                     </h1>
                 </div>
             </div>
@@ -11,15 +11,16 @@
 
         <div class="section">
             <div class="container">
+                <div id="infoMessage" class="text-center color-information-form" style="color: red;"><?php echo $message;?></div>
                 
-                <form action="/auth/register" method="post" class="form-horizontal">
+                <form action="" method="post" class="form-horizontal">
                     <input type="hidden" name="_token" value="6PMEsCzbtXBdcGUu3iCVmTaCcwl8qq9f90ElQezk">
 
                     <div class="form-group">
                         <label class="col-md-3 control-label">E-Mail Address</label>
 
                         <div class="col-md-7">
-                            <input type="email" class="form-control has-no-icon" name="email" value="">
+                            <input type="email" class="form-control has-no-icon" name="identity" value="">
                         </div>
                     </div>
 
@@ -42,7 +43,7 @@
                     <div class="form-group">
                         <div class="col-md-7 col-md-offset-3">
                             <label class="checkbox">
-                                <input type="checkbox" name="enroll" value="yes" checked/>
+                                <input type="checkbox" name="remember" value="yes" checked/>
                                 Also, subscribe me to the newsletter (very occasional e-mails).
                             </label>
                         </div>
@@ -50,7 +51,7 @@
 
                     <div class="form-group">
                         <div class="col-md-7 col-md-offset-3">
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" name="submit" class="btn btn-primary">
                                 Login
                             </button>
                         </div>

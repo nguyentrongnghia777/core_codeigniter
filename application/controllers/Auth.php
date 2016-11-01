@@ -31,13 +31,63 @@ class Auth extends CI_Controller {
 	// register the user
 	public function register()
 	{
-		// new register function
+		$this->data['title'] = $this->lang->line('register_heading');
+
+		//validate form input
+		$this->form_validation->set_rules('identity', str_replace(':', '', $this->lang->line('login_identity_label')), 'required');
+		$this->form_validation->set_rules('password', str_replace(':', '', $this->lang->line('login_password_label')), 'required');
+		$this->form_validation->set_rules('password_confirmation', str_replace(':', '', $this->lang->line('register_password_label')), 'required|matches[password]');
+
+		if ($this->form_validation->run() == true)
+		{
+			// check to see if the user is register in
+			// save cookie : sent newsletter for user
+			$remember = (bool) $this->input->post('remember');
+
+			if ($this->ion_auth->register($this->input->post('identity'), $this->input->post('password'), $remember))
+			{
+				//if the login is successful
+				//redirect them back to the home page
+				$this->session->set_flashdata('message', $this->ion_auth->messages());
+				redirect('/', 'refresh');
+			}
+			else
+			{
+				// if the login was un-successful
+				// redirect them back to the login page
+				$this->session->set_flashdata('message', $this->ion_auth->errors());
+				redirect('auth/login', 'refresh'); // use redirects instead of loading views for compatibility with MY_Controller libraries
+			}
+		}
+		else
+		{
+			// the user is not logging in so display the login page
+			// set the flash data error message if there is one
+			$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
+
+			$this->data['identity'] = array('name' => 'identity',
+				'id'    => 'identity',
+				'type'  => 'text',
+				'value' => $this->form_validation->set_value('identity'),
+			);
+			$this->data['password'] = array('name' => 'password',
+				'id'   => 'password',
+				'type' => 'password',
+			);
+
+			$this->_render_page('auth/register', $this->data);
+		}
 	}
 
 	// log the user in
-	public function login()
-	{
+	public function login() {
+		if ($this->ion_auth->logged_in()) {
+			// redirect them to the login page
+			redirect('/admin/home');
+		}
+
 		$this->data['title'] = $this->lang->line('login_heading');
+		
 
 		//validate form input
 		$this->form_validation->set_rules('identity', str_replace(':', '', $this->lang->line('login_identity_label')), 'required');

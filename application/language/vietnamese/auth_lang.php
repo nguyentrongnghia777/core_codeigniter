@@ -17,14 +17,18 @@
 // Errors
 $lang['error_csrf'] = 'Phát hiện truy vấn lạ. Vui lòng thực hiện lại thao tác.';
 
+//Register
+$lang['register_heading']      		= 'Đăng kí';
+$lang['register_password_label']	   	= 'Mật khẩu nhập lại';
+
 // Login
-$lang['login_heading']         = 'Đăng nhập';
-$lang['login_subheading']      = 'Đăng nhập bằng tài khoản Hợp Âm Chuẩn';
-$lang['login_identity_label']  = 'Tên tài khoản hoặc Email';
-$lang['login_password_label']  = 'Mật khẩu';
-$lang['login_remember_label']  = 'Nhớ mật khẩu';
-$lang['login_submit_btn']      = 'Đăng nhập';
-$lang['login_forgot_password'] = 'Quên mật khẩu?';
+$lang['login_heading']         		= 'Đăng nhập';
+$lang['login_subheading']      		= 'Đăng nhập bằng tài khoản Hợp Âm Chuẩn';
+$lang['login_identity_label']  		= 'Tên tài khoản hoặc Email';
+$lang['login_password_label']  		= 'Mật khẩu';
+$lang['login_remember_label']  		= 'Nhớ mật khẩu';
+$lang['login_submit_btn']      		= 'Đăng nhập';
+$lang['login_forgot_password'] 		= 'Quên mật khẩu?';
 
 // Index
 $lang['index_heading']           = 'Tài khoản';
