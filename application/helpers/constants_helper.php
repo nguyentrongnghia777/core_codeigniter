@@ -17,4 +17,8 @@ class Constants_helper
     // Roles
     const ROLES_MEMBER = 'member';
     const ROLES_ADMIN = 'admin';
+
+    // Language
+    const LANGUAGE_VIETNAMESE = 'vietnamese';
+    const LANGUAGE_ENGLISH = 'english';
 }

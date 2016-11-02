@@ -14,7 +14,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="<?=base_url('front-end/images/favicon.png');?>" type="image/x-icon" />
     <link rel="stylesheet" href="<?=base_url('front-end/css/bootstrap.min.css');?>">
-    <link rel="stylesheet" href="<?=base_url('front-end/css/bootstrap-theme.min.css');?>">
     <link rel="stylesheet" href="<?=base_url('front-end/css/master.css');?>">
 </head>
 
@@ -24,6 +23,10 @@
         <header>
             <section class="container">
                 <h1>header</h1>
+                <p class="language">
+                    <a href="<?=base_url('language/switch_language/vietnamese')?>" class="<?= $this->config->item('language') == Constants_helper::LANGUAGE_VIETNAMESE ? 'active' : '' ?>">Vietnamese</a>
+                    <a href="<?=base_url('language/switch_language/english')?>" class="<?= $this->config->item('language') == Constants_helper::LANGUAGE_ENGLISH ? 'active' : '' ?>">English</a>
+                </p>
                 <p>
                     <?php if ($user) { ?>
                         <a href="<?=base_url('/profile/' . $user->username);?>"><?= $user->full_name ? $user->full_name : $user->username; ?></a>

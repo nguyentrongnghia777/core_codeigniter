@@ -8,6 +8,12 @@ class Base_Controller extends CI_Controller {
     function __construct() {
         parent::__construct();
         
+        // set Language
+        $siteLang = $this->session->userdata('site_lang');
+        if ($siteLang) {
+            $this->config->set_item('language', $siteLang);
+        }
+
         // Load libraries
         $this->load->library('ion_auth');
 

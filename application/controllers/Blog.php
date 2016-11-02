@@ -9,6 +9,8 @@ class Blog extends Base_Controller {
     	$this->load->language('common_lang');
     	$this->load->language('blog_lang');
 
+        // var_dump($this->config->item('language'));
+
         $offset = $this->input->get('offset');
         $limit = 5;
         $data['keyword'] = $this->input->get('keyword');

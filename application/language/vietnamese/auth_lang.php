@@ -23,7 +23,7 @@ $lang['register_password_label']	   	= 'Mật khẩu nhập lại';
 
 // Login
 $lang['login_heading']         		= 'Đăng nhập';
-$lang['login_subheading']      		= 'Đăng nhập bằng tài khoản Hợp Âm Chuẩn';
+$lang['login_subheading']      		= 'Đăng nhập bằng tài khoản người dùng';
 $lang['login_identity_label']  		= 'Tên tài khoản hoặc Email';
 $lang['login_password_label']  		= 'Mật khẩu';
 $lang['login_remember_label']  		= 'Nhớ mật khẩu';
