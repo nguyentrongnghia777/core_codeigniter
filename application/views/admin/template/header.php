@@ -5,13 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>AdminLTE 2 | Dashboard</title>
         <!-- Tell the browser to be responsive to screen width -->
-        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"><!-- Alertify -->
+        <link rel="stylesheet" href="<?= base_url('front-end/css/alertify.min.css') ?>">
+        <link rel="stylesheet" href="<?= base_url('front-end/css/default.min.css') ?>">
         <!-- Bootstrap 3.3.6 -->
         <link rel="stylesheet" href="<?= base_url('front-end/css/bootstrap.min.css') ?>">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-        <!-- Alertify -->
-        <link rel="stylesheet" href="<?= base_url('front-end/css/alertify.css') ?>">
         <!-- Ionicons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
         <!-- Theme style -->
@@ -34,8 +34,8 @@
         <!-- bootstrap datatables -->
         <link rel="stylesheet" href="<?= base_url('front-end/plugins/datatables/dataTables.bootstrap.css') ?>">
         <!-- bootstrap AdminLTE -->
-        <link rel="stylesheet" href="<?= base_url('front-end/css/skins/AdminLTE.min.css') ?>">
-        <link rel="stylesheet" href="<?= base_url('front-end/css/skins/AdminLTE.css') ?>">
+        <link rel="stylesheet" href="<?= base_url('front-end/css/AdminLTE.min.css') ?>">
+        <link rel="stylesheet" href="<?= base_url('front-end/css/AdminLTE.css') ?>">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -175,7 +175,7 @@
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <img src="<?= base_url('front-end/img/user2-160x160.jpg') ?>" class="user-image" alt="User Image">
-                                <span class="hidden-xs"><?= $user->username ?></span>
+                                <span class="hidden-xs"></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
@@ -183,7 +183,7 @@
                                     <img src="<?= base_url('front-end/img/user2-160x160.jpg') ?>" class="img-circle" alt="User Image">
 
                                     <p>
-                                      <?= $user->username ?> - Web Developer
+                                       - Web Developer
                                       <small>Member since Nov. 2012</small>
                                     </p>
                                 </li>
@@ -231,7 +231,7 @@
                             <img src="<?= base_url('front-end/img/user2-160x160.jpg') ?>" class="img-circle" alt="User Image">
                         </div>
                         <div class="pull-left info">
-                            <p><?= $user->username ?></p>
+                            <p></p>
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
                     </div>

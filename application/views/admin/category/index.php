@@ -82,10 +82,11 @@
 													<a href="<?= base_url('admin/category/update/'.$row->id) ?>" title="Chỉnh sửa" class="tipS ">
 														<img src="<?= base_url('front-end/img/icons/color/pencil.png') ?>" />
 													</a>
-									
-													<a href="<?= base_url('admin/category/delete/'.$row->id) ?>" title="Xóa" class="tips verify_action" style="margin-left: 10px" >
-														<img src="<?= base_url('front-end/img/icons/color/delete.png') ?>" />
+
+													<a href="#" title="Xóa" class="tips" style="margin-left: 10px" >
+														<img onclick="removeCategory('<?= base_url('admin/category/delete/'.$row->id) ?>')" src="<?= base_url('front-end/img/icons/color/delete.png') ?>" />
 													</a>
+
 												</td>
 											</tr>
 											<?php } ?>
@@ -104,5 +105,17 @@
 		</div>
 	</section>
 	<!-- /.main content -->
-		
+
+	<!-- scrip alertify -->
+	<script language="javascript">
+		function removeCategory(url) {
+			alertify.confirm('Confirm Title', 'Confirm Message', function() {
+				alertify.success('Ok');
+				window.location = url;
+			}, function() {
+				alertify.error('Cancel');
+			});
+		}
+	</script>
+
 <?php $this->load->view('admin/template/footer') ?>

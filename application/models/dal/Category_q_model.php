@@ -19,8 +19,7 @@ class Category_q_model extends CI_model
      * @param   $id
      * @return array
      */
-    function get_category_by_id($id) 
-    {
+    function get_category_by_id($id) {
         $query = $this->db
                     ->select()
                     ->from(Constants_helper::TBL_CATEGORYS)

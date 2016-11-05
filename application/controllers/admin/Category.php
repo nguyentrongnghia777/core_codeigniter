@@ -71,6 +71,8 @@ class Category extends Base_Controller {
 	 * Update category
 	 */
 	public function update($id = NULL) {
+
+		// Check if user input id error
 		if (!$id  || !is_numeric($id)) {
 			show_404();
 		}
@@ -121,6 +123,13 @@ class Category extends Base_Controller {
 	 * Delete category
 	 */
 	public function delete($id = NULL) {
+
+		// Check if user input id error
+		if (!$id  || !is_numeric($id)) {
+			show_404();
+		}
+
+		// Request delete
 		if ($this->category_c_model->delete($id)) {
 			redirect(base_url('admin/category'));
 		} else {

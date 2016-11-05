@@ -18,9 +18,6 @@ class Category_c_model extends CI_model
 	 * @return boolean
 	 */
 	function update($id, $data) {
-		if (!$id  || !is_numeric($id)) {
-			return FALSE;
-		}
 		return $this->db->update(Constants_helper::TBL_CATEGORYS, $data, array('id' => $id));
 	}
 
@@ -29,11 +26,7 @@ class Category_c_model extends CI_model
 	 * @param $id 
 	 * @return boolean
 	 */
-	function delete($id)
-	{
-		if (!$id  || !is_numeric($id)) {
-			return FALSE;
-		}
+	function delete($id) {
 		return $this->db->delete(Constants_helper::TBL_CATEGORYS, array('id' => $id));
 	}
 }

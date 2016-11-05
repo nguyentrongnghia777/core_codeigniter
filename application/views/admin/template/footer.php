@@ -227,8 +227,11 @@
         <!-- AdminLTE App -->
         <script src="<?= base_url('front-end/js/app.min.js') ?>"></script>
         <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-        <script src="<?= base_url('front-end/js/pages/dashboard.js') ?>"></script>
+<!--         <script src="front-end/js/pages/dashboard.js"></script> -->
         <!-- AdminLTE for demo purposes -->
         <script src="<?= base_url('front-end/js/demo.js') ?>"></script>
+
+        <!-- Alerttify.js -->
+        <script src="<?= base_url('front-end/js/vendor/alertify.js') ?>"></script>
     </body>
 </html>
