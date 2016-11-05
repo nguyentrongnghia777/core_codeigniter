@@ -13,6 +13,7 @@ class Constants_helper
     const TBL_USERS_GROUPS = 'users_groups';
     const TBL_LOGIN_ATTEMPTS = 'login_attempts';
     const TBL_BLOGS = 'blogs';
+    const TBL_CATEGORYS = 'categorys';
 
     // Roles
     const ROLES_MEMBER = 'member';
@@ -21,4 +22,7 @@ class Constants_helper
     // Language
     const LANGUAGE_VIETNAMESE = 'vietnamese';
     const LANGUAGE_ENGLISH = 'english';
+
+    // count active
+    const CATEGORYS_ACTIVE = 1;
 }
