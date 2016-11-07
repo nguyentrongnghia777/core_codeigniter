@@ -1,6 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-$lang['category_cate'] = 'Category';
 $lang['category_list'] = 'List category';
 $lang['category_name'] = 'Name category';
 $lang['category_description'] = 'Description';

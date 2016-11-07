@@ -2,3 +2,4 @@
 
 $lang['common_search'] = 'Tìm kiếm ...';
 $lang['common_number'] = 'Số thứ tự';
+$lang['category_cate'] = 'Chuyên Mục';

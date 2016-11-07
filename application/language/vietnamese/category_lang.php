@@ -1,6 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-$lang['category_cate'] = 'Chuyên Mục';
 $lang['category_list'] = 'Danh sách chuyên mục';
 $lang['category_name'] = 'Tên category';
 $lang['category_description'] = 'Mô tả';

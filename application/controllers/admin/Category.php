@@ -15,6 +15,7 @@ class Category extends Base_Controller {
 	 * List category
 	 */
 	public function index() {
+
 		// Loader
 		$this->load->language('category_lang');
 		$this->load->language('common_lang');
