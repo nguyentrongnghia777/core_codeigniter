@@ -1,65 +1,67 @@
 <?php $this->load->view('admin/template/header', ['title' => 'Create User']) ?>
-<div class="page-create-user">
-    <div class="container">
-
-        <h1><?php echo lang('create_user_heading');?></h1>
-        <p><?php echo lang('create_user_subheading');?></p>
-
-        <div id="infoMessage"><?php echo $message;?></div>
-
-        <?php echo form_open("admin/user/create_user");?>
-
-            <p>
-                <?php echo lang('create_user_fname_label', 'first_name');?> <br />
-                <?php echo form_input($first_name);?>
-            </p>
-
-            <p>
-                <?php echo lang('create_user_lname_label', 'last_name');?> <br />
-                <?php echo form_input($last_name);?>
-            </p>
-
-            <?php
-                if($identity_column!=='email') {
-                    echo '<p>';
-                    echo lang('create_user_identity_label', 'identity');
-                    echo '<br />';
-                    echo form_error('identity');
-                    echo form_input($identity);
-                    echo '</p>';
-                }
-            ?>
-
-            <p>
-                <?php echo lang('create_user_company_label', 'company');?> <br />
-                <?php echo form_input($company);?>
-            </p>
-
-            <p>
-                <?php echo lang('create_user_email_label', 'email');?> <br />
-                <?php echo form_input($email);?>
-            </p>
-
-            <p>
-                <?php echo lang('create_user_phone_label', 'phone');?> <br />
-                <?php echo form_input($phone);?>
-            </p>
-
-            <p>
-                <?php echo lang('create_user_password_label', 'password');?> <br />
-                <?php echo form_input($password);?>
-            </p>
-
-            <p>
-                <?php echo lang('create_user_password_confirm_label', 'password_confirm');?> <br />
-                <?php echo form_input($password_confirm);?>
-            </p>
-
-
-            <p><?php echo form_submit('submit', lang('create_user_submit_btn'));?></p>
-
-        <?php echo form_close();?>
-
-    </div>
-</div>
+<!-- Content Header (Page header) -->
+<?php $this->load->view('admin/user/partial/head') ?>
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="box box-info">
+					<div class="box-header with-border">
+						<h3 class="box-title"><?= lang('create_user_heading');?></h3>
+					</div>
+					<!-- /.box-header -->
+					<!-- form start -->
+					
+					<form class="form-horizontal" action="" method="POST">
+						<div class="box-body">
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 control-label"><?= lang('create_user_full_name_label');?></label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="full_name" class="form-control" id="discription" value="<?= set_value('full_name') ?>">
+                                    <div name="name_error" class="clear error"><?= form_error('full_name'); ?></div>
+                                </div>
+                            </div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label"><?= lang('create_user_email_label') ?></label>
+								<div class="col-sm-10">
+									<input type="text" name="email" class="form-control" id="discription" value="<?= set_value('email') ?>">
+									<div name="name_error" class="clear error"><?= form_error('email'); ?></div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label"><?= lang('create_user_phone_label') ?></label>
+								<div class="col-sm-10">
+									<input type="text" name="phone" class="form-control" id="discription" value="<?= set_value('phone') ?>">
+									<div name="name_error" class="clear error"><?= form_error('phone'); ?></div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label"><?= lang('create_user_password_label') ?></label>
+								<div class="col-sm-10">
+									<input type="password" name="password" class="form-control" id="discription">
+									<div name="name_error" class="clear error"><?= form_error('password'); ?></div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label"><?= lang('create_user_password_confirm_label') ?></label>
+								<div class="col-sm-10">
+									<input type="password" name="password_confirm" class="form-control" id="discription" value="">
+									<div name="name_error" class="clear error"><?= form_error('password_confirm'); ?></div>
+								</div>
+							</div>
+						</div>
+						<!-- /.box-body -->
+						<div class="box-footer">
+							<button type="submit" name="submit" class="btn btn-info pull-right"><?= lang('create_user_submit_btn') ?></button>
+						</div>
+						<!-- /.box-footer -->
+					</form>
+				</div>
+				<!-- /.box -->
+			</div>
+			<!-- /.col -->
+		</div>
+		<!-- /.row -->
+	</section>
+	<!-- /.main content -->
 <?php $this->load->view('admin/template/footer') ?>

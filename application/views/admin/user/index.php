@@ -1,35 +1,78 @@
-<?php $this->load->view('admin/template/header', ['title' => 'Manage User']) ?>
-<div class="page-user">
-    <div class="container">
-        <h1><?php echo lang('index_heading');?></h1>
-        <p><?php echo lang('index_subheading');?></p>
+<?php $this->load->view('admin/template/header', ['title' => 'Page Home']) ?>
+<!-- Content Header (Page header) -->
+<?php $this->load->view('admin/user/partial/head') ?>	
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="box">
+					<div class="box-header">
+						<h3 class="box-title"><?= lang('user_list') ?></h3>
+					</div>
+					<!-- /.box-header -->
+					<div class="box-body">
+						<div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+							<div class="row">
+								<div class="col-sm-6"></div>
+								<div class="col-sm-6"></div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12">
+									<table id="example2" class="table table-bordered table-hover dataTable text-center" role="grid" aria-describedby="example2_info">
+										<thead>
+											<tr role="row">
+												<th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending"><?= lang('index_fname_th');?></th>
+												<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending"><?= lang('index_email_th');?></th>
+												<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"><?= lang('index_groups_th');?></th>
+												<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"><?= lang('index_status_th');?></th>
+												<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"><?= lang('index_action_th');?></th>
+											</tr>
+										</thead>
+										<tbody>
+											<?php foreach ($users as $user) :?>
+											<tr role="row" class="odd">
+												<td class="sorting_1"><?= htmlspecialchars($user->full_name,ENT_QUOTES,'UTF-8');?></td>
+												<td><?= htmlspecialchars($user->email,ENT_QUOTES,'UTF-8');?></td>
+												<td>
+													<?php foreach ($user->groups as $group):?>
+														<?= anchor("admin/user/edit_group/".$group->id, htmlspecialchars($group->name,ENT_QUOTES,'UTF-8')) ;?><br />
+													<?php endforeach?>
+												</td>
+												<td><?= ($user->active) ? anchor("admin/user/deactivate/".$user->id, lang('index_active_link')) : anchor("admin/user/activate/". $user->id, lang('index_inactive_link'));?></td>
+												<td class="option">
+													<a href="<?= base_url('admin/user/edit_user/'.$user->id) ?>" title="Chỉnh sửa" class="tipS ">
+														<img src="<?= base_url('front-end/img/icons/color/pencil.png') ?>" />
+													</a>
 
-        <div id="infoMessage"><?php echo $message;?></div>
+												</td>
+											</tr>
+											<?php endforeach ?>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+					<!-- /.box-body -->
+				</div>
+				<!-- /.box -->
+			</div>
+			<!-- /.col -->
+		</div>
+	</section>
+	<!-- /.main content -->
 
-        <table class="table table-bordered table-hover" >
-            <tr>
-                <th><?php echo lang('index_fname_th');?></th>
-                <th><?php echo lang('index_email_th');?></th>                
-                <th><?php echo lang('index_groups_th');?></th>
-                <th><?php echo lang('index_status_th');?></th>
-                <th><?php echo lang('index_action_th');?></th>
-            </tr>
-            <?php foreach ($users as $user):?>
-                <tr>
-                    <td><?php echo htmlspecialchars($user->full_name,ENT_QUOTES,'UTF-8');?></td>
-                    <td><?php echo htmlspecialchars($user->email,ENT_QUOTES,'UTF-8');?></td>
-                    <td>
-                        <?php foreach ($user->groups as $group):?>
-                            <?php echo anchor("admin/user/edit_group/".$group->id, htmlspecialchars($group->name,ENT_QUOTES,'UTF-8')) ;?><br />
-                        <?php endforeach?>
-                    </td>
-                    <td><?php echo ($user->active) ? anchor("admin/user/deactivate/".$user->id, lang('index_active_link')) : anchor("admin/user/activate/". $user->id, lang('index_inactive_link'));?></td>
-                    <td><?php echo anchor("admin/user/edit_user/".$user->id, 'Edit') ;?></td>
-                </tr>
-            <?php endforeach;?>
-        </table>
+	<!-- scrip alertify -->
+	<script language="javascript">
+		function removeCategory(url) {
+			alertify.confirm('Confirm Title', 'Confirm Message', function() {
+				alertify.success('Ok');
+				window.location = url;
+			}, function() {
+				alertify.error('Cancel');
+			});
+		}
+	</script>
 
-        <p><?php echo anchor('admin/user/create_user', lang('index_create_user_link'))?> | <?php echo anchor('admin/user/create_group', lang('index_create_group_link'))?></p>
-    </div>
-</div>
 <?php $this->load->view('admin/template/footer') ?>

@@ -9,16 +9,16 @@ class Category extends Base_Controller {
 		// Load model
 		$this->load->model('dal/category_q_model');
 		$this->load->model('dal/category_c_model');
+
+		// Load library language
+		$this->load->language('category_lang');
+		$this->load->language('common_lang');
 	}
 
 	/**
 	 * List category
 	 */
 	public function index() {
-
-		// Loader
-		$this->load->language('category_lang');
-		$this->load->language('common_lang');
 
 		// Get list category
 		$list_cate = $this->category_q_model->get_list();
