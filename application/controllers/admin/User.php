@@ -16,6 +16,7 @@ class User extends Base_Controller {
 		$this->load->language('category_lang');
 		$this->load->language('common_lang');
 		$this->load->language('auth_lang');
+		$this->load->language('user_lang');
 
 		// Load model
 		$this->load->model('dal/user_q_model');
@@ -133,7 +134,6 @@ class User extends Base_Controller {
 	// create a new user
 	public function create_user()
 	{
-
 		$this->data['title'] = $this->lang->line('create_user_heading');
 
 		if (!$this->ion_auth->logged_in() || !$this->ion_auth->is_admin())
@@ -147,7 +147,7 @@ class User extends Base_Controller {
 
 		// validate form input
 		$this->form_validation->set_rules('full_name', $this->lang->line('create_user_validation_full_name_label'), 'required');
-		if($identity_column!=='email')
+		if($identity_column !== 'email')
 		{
 			$this->form_validation->set_rules('identity',$this->lang->line('create_user_validation_identity_label'),'required|is_unique['.$tables['users'].'.'.$identity_column.']');
 			$this->form_validation->set_rules('email', $this->lang->line('create_user_validation_email_label'), 'required|valid_email');
@@ -159,7 +159,6 @@ class User extends Base_Controller {
 		$this->form_validation->set_rules('phone', $this->lang->line('create_user_validation_phone_label'), 'trim');
 		$this->form_validation->set_rules('password', $this->lang->line('create_user_validation_password_label'), 'required|min_length[' . $this->config->item('min_password_length', 'ion_auth') . ']|max_length[' . $this->config->item('max_password_length', 'ion_auth') . ']|matches[password_confirm]');
 		$this->form_validation->set_rules('password_confirm', $this->lang->line('create_user_validation_password_confirm_label'), 'required');
-
 		if ($this->form_validation->run() == true)
 		{
 			$email    = strtolower($this->input->post('email'));
@@ -235,6 +234,7 @@ class User extends Base_Controller {
 		}
 
 		$user = $this->ion_auth->user($id)->row();
+		// var_dump($user); exit();
 		$groups=$this->ion_auth->groups()->result_array();
 		$currentGroups = $this->ion_auth->get_users_groups($id)->result();
 
@@ -326,7 +326,7 @@ class User extends Base_Controller {
 		$this->data['message'] = (validation_errors() ? validation_errors() : ($this->ion_auth->errors() ? $this->ion_auth->errors() : $this->session->flashdata('message')));
 
 		// pass the user to the view
-		$this->data['user'] = $user;
+		$this->data['member'] = $user;
 		$this->data['groups'] = $groups;
 		$this->data['currentGroups'] = $currentGroups;
 		
@@ -346,7 +346,7 @@ class User extends Base_Controller {
 			'id'   => 'password_confirm',
 			'type' => 'password'
 		);
-		$this->data['user'] = $this->user_q_model->get_user_by_id($id);
+
 		$this->_render_page('admin/user/edit_user', $this->data);
 	}
 

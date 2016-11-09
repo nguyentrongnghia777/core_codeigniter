@@ -14,13 +14,22 @@
 					
 					<form class="form-horizontal" action="" method="POST">
 						<div class="box-body">
-                            <div class="form-group">
-                                <label for="inputPassword3" class="col-sm-2 control-label"><?= lang('create_user_full_name_label');?></label>
-                                <div class="col-sm-10">
-                                    <input type="text" name="full_name" class="form-control" id="discription" value="<?= set_value('full_name') ?>">
-                                    <div name="name_error" class="clear error"><?= form_error('full_name'); ?></div>
-                                </div>
-                            </div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label"><?= lang('create_user_full_name_label');?></label>
+								<div class="col-sm-10">
+									<input type="text" name="full_name" class="form-control" id="discription" value="<?= set_value('full_name') ?>">
+									<div name="name_error" class="clear error"><?= form_error('full_name'); ?></div>
+								</div>
+							</div>
+							<?php if ($identity_column!=='email') :?>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label"><?= lang('create_user_identity_label'); ?></label>
+								<div class="col-sm-10">
+									<input type="text" name="identity" class="form-control" id="discription" value="<?= set_value('identity') ?>">
+									<div name="name_error" class="clear error"><?= form_error('identity'); ?></div>
+								</div>
+							</div>
+							<?php endif ;?>
 							<div class="form-group">
 								<label for="inputPassword3" class="col-sm-2 control-label"><?= lang('create_user_email_label') ?></label>
 								<div class="col-sm-10">

@@ -1,4 +1,4 @@
-<?php $this->load->view('admin/template/header', ['title' => 'Page Home']) ?>
+<?php $this->load->view('admin/template/header', ['title' => 'Page Category']) ?>
 <!-- Content Header (Page header) -->
 <?php $this->load->view('admin/category/partial/head') ?>	
 	<!-- Main content -->

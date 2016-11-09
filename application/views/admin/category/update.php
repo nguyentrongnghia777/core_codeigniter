@@ -17,14 +17,14 @@
 			                <div class="form-group">
 			                  	<label for="inputEmail3" class="col-sm-2 control-label"><?= lang('category_name') ?> :</label>
 								<div class="col-sm-10">
-			                    	<input type="text" name="name" class="form-control" id="name" value="<?= $category->name ?>">
+			                    	<input type="text" name="name" class="form-control" id="name" value="<?= @$post['name'] ?>">
 			                    	<div name="name_error" class="clear error"><?php echo form_error('name'); ?></div>
 			                   	</div>   	
 			                 </div> 
 		                	<div class="form-group">
 		                  		<label for="inputPassword3" class="col-sm-2 control-label"><?= lang('category_description') ?> :</label>
 								<div class="col-sm-10">
-		                    		<input type="text" name="discription" class="form-control" id="discription" value="<?= $category->discription?>">
+		                    		<input type="text" name="discription" class="form-control" id="discription" value="<?= @$post['discription'] ?>">
 		                    		<div name="name_error" class="clear error"><?php echo form_error('discription'); ?></div>
 		                    	</div>
 		                	</div>

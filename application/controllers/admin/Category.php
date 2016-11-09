@@ -87,6 +87,7 @@ class Category extends Base_Controller {
 
 		// If user click submit
 		if ($this->input->post()) {
+			$data['post'] = $this->input->post();
 
 			//validate form input
 			$this->form_validation->set_rules('name', 'Tên danh mục', 'required');
@@ -109,16 +110,18 @@ class Category extends Base_Controller {
 					$this->session->set_flashdata('message', 'Cập nhật danh mục không thành công !');
 				}
 			}
-		}
+		} else {
+			// Get category by id
+			$category = $this->category_q_model->get_category_by_id($id);
+			if (!$category) {
+				show_404();
+			}
 
-		// Get category by id
-		$category = $this->category_q_model->get_category_by_id($id);
-		if (!$category) {
-			show_404();
+			$data['post']['name'] = $category->name;
+			$data['post']['discription'] = $category->discription;
 		}
 
 		// Load view
-		$data['category'] = $category;
 		$data['message'] = $this->session->flashdata('message');
 		$this->load->view('admin/category/update', $data);
 	}

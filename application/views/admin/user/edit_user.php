@@ -2,6 +2,15 @@
 <!-- Content Header (Page header) -->
 <?php $this->load->view('admin/user/partial/head') ?>
 	<!-- Main content -->
+	<?php 
+		echo '<pre>';
+		print_r($user);
+		echo '</pre>';
+
+		echo '<pre>';
+		print_r($member);
+		echo '</pre>';
+	?>
 	<section class="content">
 		<div class="row">
 			<div class="col-xs-12">
@@ -65,7 +74,8 @@
 							</div>
 
 						</div>
-						
+						<?php echo form_hidden('id', $member->id);?>
+						<?php echo form_hidden($csrf); ?>
 						<!-- /.box-body -->
 						<div class="box-footer">
 							<button type="submit" name="submit" class="btn btn-info pull-right"><?= lang('edit_user_submit_btn') ?></button>
