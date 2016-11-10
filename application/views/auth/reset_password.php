@@ -1,28 +1,26 @@
 <?php $this->load->view('template/auth_header', ['title' => 'Forgot password']) ?>
-<div class="page-forgot-password">
-    <div class="container">    
-        <h1><?php echo lang('reset_password_heading');?></h1>
-
+<div class="login-box">
+    <div class="login-logo">
+        <a href="#"><b>PhuDat</b>FT</a>
+    </div>
+    <div class="login-box-body">   
+        <h1 align="center"><?php echo lang('reset_password_heading');?></h1>
         <div id="infoMessage"><?php echo $message;?></div>
-
-        <?php echo form_open('auth/reset_password/' . $code);?>
-
-            <p>
-                <label for="new_password"><?php echo sprintf(lang('reset_password_new_password_label'), $min_password_length);?></label> <br />
-                <?php echo form_input($new_password);?>
-            </p>
-
-            <p>
-                <?php echo lang('reset_password_new_password_confirm_label', 'new_password_confirm');?> <br />
-                <?php echo form_input($new_password_confirm);?>
-            </p>
-
-            <?php echo form_input($user_id);?>
-            <?php echo form_hidden($csrf); ?>
-
-            <p><?php echo form_submit('submit', lang('reset_password_submit_btn'));?></p>
-
-        <?php echo form_close();?>
+        <form action="" method="post">
+            <div class="form-group has-feedback">
+                <input type="password" class="form-control" placeholder="New Password" name="new" value id ="new" pattern="^.{8}.*$">
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                <div name="name_error" class="clear error"><?php echo form_error('new'); ?>
+                </div>
+            </div>
+            <div class="form-group has-feedback">
+                <input type="password" class="form-control" placeholder="New Confirm Password" name="new_confirm" pattern="^.{8}.*$">
+                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                <div name="name_error" class="clear error"><?php echo form_error('new_confirm'); ?>
+                </div>
+            </div>
+            <p><input type="submit" name="submit" value="Submit" class="btn btn-primary btn-block btn-flat"></p>
+        </form>
     </div>
 </div>
 <?php $this->load->view('template/auth_footer') ?>
