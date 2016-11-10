@@ -3,27 +3,27 @@
 
 <div class="login-box">
     <div class="login-logo">
-        <a href="#"><b>PhuDat</b>FT</a>
+        <a href="#"><b>Admin</b>FT</a>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
         <div id="infoMessage" class="text-center color-information-form"><?= $message ?> </div>
-        <p class="login-box-msg">Register Membership</p>
+        <h1 align="center"><?= lang('register_heading');?></h1>
         <form action="" method="post">
             <div class="form-group has-feedback">
-                <input type="email" class="form-control" placeholder="Email" name="identity" value="">
+                <input type="email" class="form-control" placeholder="<?= lang('login_identity_label');?>" name="identity" value="">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                 <div name="name_error" class="clear error"><?php echo form_error('identity'); ?>
                 </div>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Password" name="password">
+                <input type="password" class="form-control" placeholder="<?= lang('login_password_label');?>" name="password">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 <div name="name_error" class="clear error"><?php echo form_error('password'); ?>
                 </div>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Confirm Password" name="password_confirmation">
+                <input type="password" class="form-control" placeholder="<?= lang('register_password_label');?>" name="password_confirmation">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 <div name="name_error" class="clear error"><?php echo form_error('password_confirmation'); ?>
                 </div>

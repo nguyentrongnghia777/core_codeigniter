@@ -18,8 +18,9 @@
 $lang['error_csrf'] = 'Phát hiện truy vấn lạ. Vui lòng thực hiện lại thao tác.';
 
 //Register
-$lang['register_heading']      		= 'Đăng kí';
+$lang['register_heading']      			= 'Đăng kí';
 $lang['register_password_label']	   	= 'Mật khẩu nhập lại';
+$lang['register_newletter']				= 'Nhận thông báo qua email';
 
 // Login
 $lang['login_heading']         		= 'Đăng nhập';
@@ -29,6 +30,10 @@ $lang['login_password_label']  		= 'Mật khẩu';
 $lang['login_remember_label']  		= 'Nhớ mật khẩu';
 $lang['login_submit_btn']      		= 'Đăng nhập';
 $lang['login_forgot_password'] 		= 'Quên mật khẩu?';
+$lang['login_by_fb'] 				= 'Đăng nhập bằng tài khoản Facebook';
+$lang['login_by_gg'] 				= 'Đăng nhập bằng tài khoản Google+';
+$lang['login_register']				= 'Đăng ký tài khoản mới';
+$lang['login_or']					= '- Hoặc -';
 
 // Index
 $lang['index_heading']           = 'Tài khoản';
@@ -122,7 +127,7 @@ $lang['edit_group_validation_desc_label']  = 'Mô tả';
 // Change Password
 $lang['change_password_heading']                               = 'Đổi mật khẩu';
 $lang['change_password_old_password_label']                    = 'Mật khẩu cũ:';
-$lang['change_password_new_password_label']                    = 'Mật khẩu mới (ít nhất %s ký tự):';
+$lang['change_password_new_password_label']                    = 'Mật khẩu mới (ít nhất 8 ký tự):';
 $lang['change_password_new_password_confirm_label']            = 'Xác nhận mật khẩu mới:';
 $lang['change_password_submit_btn']                            = 'Lưu lại';
 $lang['change_password_validation_old_password_label']         = 'Mật khẩu cũ';
@@ -133,7 +138,7 @@ $lang['change_password_validation_new_password_confirm_label'] = 'Xác nhận m�
 $lang['forgot_password_heading']                 = 'Quên mật khẩu';
 $lang['forgot_password_subheading']              = 'Vui lòng nhập %s để nhận được email khôi phục mật khẩu.';
 $lang['forgot_password_email_label']             = '%s:';
-$lang['forgot_password_submit_btn']              = 'Xác nhận';
+$lang['forgot_password_submit_btn']              = 'Nhận đường dẫn mật khẩu';
 $lang['forgot_password_validation_username_label']  = 'Tên tài khoản';
 $lang['forgot_password_validation_email_label']  = 'Email';
 $lang['forgot_password_username_identity_label'] = 'Tài khoản';
@@ -143,7 +148,7 @@ $lang['forgot_password_email_not_found']         = 'Địa chỉ email không t�
 
 // Reset Password
 $lang['reset_password_heading']                               = 'Đổi mật khẩu';
-$lang['reset_password_new_password_label']                    = 'Mật khẩu mới (ít nhất %s ký tự):';
+$lang['reset_password_new_password_label']                    = 'Mật khẩu mới (ít nhất 8 ký tự):';
 $lang['reset_password_new_password_confirm_label']            = 'Xác nhận mật khẩu mới:';
 $lang['reset_password_submit_btn']                            = 'Lưu lại';
 $lang['reset_password_validation_new_password_label']         = 'Mật khẩu mới';
