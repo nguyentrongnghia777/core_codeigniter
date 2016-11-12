@@ -316,7 +316,6 @@ class User extends Base_Controller {
 		}
 		// display the edit user form
 		$this->data['csrf'] = $this->_get_csrf_nonce();
-		var_dump(validation_errors());
 		// set the flash data error message if there is one
 		$this->data['message'] = (validation_errors() ? validation_errors() : ($this->ion_auth->errors() ? $this->ion_auth->errors() : $this->session->flashdata('message')));
 
