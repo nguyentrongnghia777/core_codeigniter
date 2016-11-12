@@ -23,7 +23,8 @@ $lang['error_csrf'] = 'This form post did not pass our security checks.';
 //Register
 $lang['register_heading']      			= 'Register';
 $lang['register_password_label']	   	= 'Comfirm password';
-$lang['register_newletter']				= 'Recieve newletter by your email';
+$lang['register_newletter']				= 'Recieve newletter';
+$lang['register_submit_btn']     		= 'Register';
 
 // Login
 $lang['login_heading']        	= 'Login';

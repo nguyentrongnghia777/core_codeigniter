@@ -33,13 +33,13 @@
 				<div class="col-xs-8">
 					<div class="checkbox icheck">
 						<label>
-							<input type="checkbox" name="remember" value="yes" checked> Nhận thông báo qua mail
+							<input type="checkbox" name="remember" value="yes" checked> <?= lang('register_newletter');?>
 						</label>
 					</div>
 				</div>
 				<!-- /.col -->
 				<div class="col-xs-4">
-					<button type="submit" name="submit" class="btn btn-primary btn-block btn-flat">Đăng ký</button>
+					<button type="submit" name="submit" class="btn btn-primary btn-block btn-flat"><?= lang('register_submit_btn');?></button>
 				</div>
 				<!-- /.col -->
 			</div>

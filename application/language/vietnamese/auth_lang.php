@@ -18,9 +18,10 @@
 $lang['error_csrf'] = 'Phát hiện truy vấn lạ. Vui lòng thực hiện lại thao tác.';
 
 //Register
-$lang['register_heading']      			= 'Đăng kí';
+$lang['register_heading']      			= 'Đăng ký';
 $lang['register_password_label']	   	= 'Mật khẩu nhập lại';
 $lang['register_newletter']				= 'Nhận thông báo qua email';
+$lang['register_submit_btn']     		= 'Đăng Ký';
 
 // Login
 $lang['login_heading']         		= 'Đăng nhập';
