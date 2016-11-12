@@ -24,7 +24,7 @@ class Migration_Category extends CI_Migration
 	}
 	
 	public function down() {
-		$this->dbforge->drop_table(Constants_helper::TBL_CATEGOGYS, TRUE);
+		$this->dbforge->drop_table(Constants_helper::TBL_CATEGORYS, TRUE);
 	}
 
 	private function dumping_data() {
