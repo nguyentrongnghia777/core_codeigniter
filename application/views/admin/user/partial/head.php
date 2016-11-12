@@ -13,6 +13,7 @@
 	<div class="row">
 		<div class="col-lg-2 col-xs-6"></div>
 		<div class="col-lg-2 col-xs-6"></div>
+		<div class="col-lg-2 col-xs-6"></div>
 		
 		<div class="col-lg-2 col-xs-6">
 			<!-- small box -->
@@ -24,15 +25,6 @@
 			</div>
 		</div>
 		<!-- ./col -->
-		<div class="col-lg-2 col-xs-6">
-			<!-- small box -->
-			<div class="small-box bg-green">
-				<div class="inner">
-					<p><?= lang('user_add_gr') ?></p>
-				</div>
-				<a href="<?= base_url('admin/user/create_group') ?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-			</div>
-		</div>
 		<div class="col-lg-2 col-xs-6">
 			<!-- small box -->
 			<div class="small-box bg-aqua">

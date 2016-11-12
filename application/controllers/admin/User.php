@@ -18,17 +18,11 @@ class User extends Base_Controller {
 		$this->load->language('auth_lang');
 		$this->load->language('user_lang');
 
-		// Load model
-		$this->load->model('dal/user_q_model');
 	}
 
 	// redirect if needed, otherwise display the user list
 	public function index()
 	{
-
-		// Get list user
-	   /* $list = $this->user_q_model->get_list();
-		$data['list'] = $list;*/
 
 		if (!$this->ion_auth->logged_in())
 		{
@@ -234,7 +228,6 @@ class User extends Base_Controller {
 		}
 
 		$user = $this->ion_auth->user($id)->row();
-		// var_dump($user); exit();
 		$groups=$this->ion_auth->groups()->result_array();
 		$currentGroups = $this->ion_auth->get_users_groups($id)->result();
 
@@ -258,6 +251,8 @@ class User extends Base_Controller {
 			if ($this->form_validation->run() === TRUE)
 			{
 				$data = array(
+					'full_name'  => $this->input->post('full_name'),
+					'email'  => $this->input->post('email'),
 					'phone'      => $this->input->post('phone'),
 					'password'      => $this->input->post('password')
 				);

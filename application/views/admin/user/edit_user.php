@@ -2,15 +2,6 @@
 <!-- Content Header (Page header) -->
 <?php $this->load->view('admin/user/partial/head') ?>
 	<!-- Main content -->
-	<?php 
-		echo '<pre>';
-		print_r($user);
-		echo '</pre>';
-
-		echo '<pre>';
-		print_r($member);
-		echo '</pre>';
-	?>
 	<section class="content">
 		<div class="row">
 			<div class="col-xs-12">
@@ -24,9 +15,23 @@
 					<form class="form-horizontal" action="" method="POST">
 						<div class="box-body">
 							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-3 control-label"><?= lang('create_user_full_name_label');?></label>
+								<div class="col-sm-9">
+									<input type="text" name="full_name" class="form-control" id="discription" value="<?= $member->full_name ?>">
+									<div name="name_error" class="clear error"><?= form_error('full_name'); ?></div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-3 control-label"><?= lang('create_user_email_label') ?></label>
+								<div class="col-sm-9">
+									<input type="text" name="email" class="form-control" id="discription" value="<?= $member->email ?>">
+									<div name="name_error" class="clear error"><?= form_error('email'); ?></div>
+								</div>
+							</div>
+							<div class="form-group">
 								<label for="inputPassword3" class="col-sm-3 control-label"><?= lang('edit_user_phone_label') ?></label>
 								<div class="col-sm-9">
-									<input type="text" name="phone" class="form-control" id="discription" value="<?= $user->phone ?>">
+									<input type="text" name="phone" class="form-control" id="discription" value="<?= $member->phone ?>">
 									<div name="name_error" class="clear error"><?= form_error('phone'); ?></div>
 								</div>
 							</div>
