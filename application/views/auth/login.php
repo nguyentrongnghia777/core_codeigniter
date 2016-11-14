@@ -2,12 +2,12 @@
 
 <div class="login-box">
 	<div class="login-logo">
-		<a href="#"><b>Admin</b>FT</a>
+		<a href="#"><b>Admin</b>LTE</a>
 	</div>
 	<!-- /.login-logo -->
 	<div class="login-box-body">
 		<div id="infoMessage" class="text-center color-information-form"><?= $message ?> </div>
-		<h1 align="center"><?= lang('login_heading');?></h1>
+		<h1><?= lang('login_heading');?></h1>
 		<form action="" method="post">
 			<div class="form-group has-feedback">
 				<input type="email" class="form-control" placeholder="<?= lang('login_identity_label');?>" name="identity" value="">

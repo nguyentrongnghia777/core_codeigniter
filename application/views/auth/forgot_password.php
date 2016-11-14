@@ -2,10 +2,10 @@
 
 <div class="login-box">
 	<div class="login-logo">
-		<a href="#"><b>Admin</b>FT</a>
+		<a href="#"><b>Admin</b>LTE</a>
 	</div>
 	<div class="login-box-body">
-		<h1 align="center"><?= lang('forgot_password_heading');?></h1>
+		<h1><?= lang('forgot_password_heading');?></h1>
 		<div id="infoMessage" class="text-center color-information-form"><?= $message ?> 
 		</div>
 		<form action="" method="post">
