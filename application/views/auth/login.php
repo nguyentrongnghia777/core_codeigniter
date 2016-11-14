@@ -3,7 +3,7 @@
 			<div class="home-inner">
 				<div class="container">
 					<h1>
-						<?= lang('login_heading') ?>
+						Login Membership
 					</h1>
 				</div>
 			</div>
@@ -18,7 +18,7 @@
 					<input type="hidden" name="_token" value="6PMEsCzbtXBdcGUu3iCVmTaCcwl8qq9f90ElQezk">
 
 					<div class="form-group">
-						<label class="col-md-3 control-label"><?=  lang('login_identity_label') ?></label>
+						<label class="col-md-3 control-label">E-Mail Address</label>
 
 						<div class="col-md-7">
 							<input type="email" class="form-control has-no-icon" name="identity" value="">
@@ -26,7 +26,7 @@
 					</div>
 
 					<div class="form-group">
-						<label class="col-md-3 control-label"><?= lang('login_password_label', 'password') ?></label>
+						<label class="col-md-3 control-label">Password</label>
 
 						<div class="col-md-7">
 							<input type="password" class="form-control has-no-icon" name="password">
@@ -38,7 +38,7 @@
 						<div class="col-md-7 col-md-offset-3">
 							<label class="checkbox">
 								<input type="checkbox" name="remember" value="yes" checked/>
-								<?= lang('login_remember_label');?>
+								Remember me.
 							</label>
 						</div>
 					</div>
@@ -47,14 +47,14 @@
 						<label class="col-md-3 control-label"></label>
 
 						<div class="col-md-7">
-							<p><a href="<?= base_url('auth/forgot_password') ?>"><?= lang('login_forgot_password');?></a></p>
+							<p><a href="<?= base_url('auth/forgot_password') ?>">Quên mật khẩu</a></p>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-md-7 col-md-offset-3">
 							<button type="submit" name="submit" class="btn btn-primary">
-								<?= lang('login_submit_btn') ?>
+								Login
 							</button>
 						</div>
 					</div>
