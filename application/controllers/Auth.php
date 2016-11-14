@@ -13,7 +13,7 @@ class Auth extends CI_Controller {
 		$this->lang->load('auth');
 	}
 
-	// redirect home if logged, otherwise redirect login
+    // redirect home if logged, otherwise redirect login
 	public function index()
 	{
 
@@ -85,9 +85,6 @@ class Auth extends CI_Controller {
 			// redirect them to the login page
 			redirect('/admin/home');
 		}
-
-		// load language
-		$this->load->language('auth_lang');
 
 		$this->data['title'] = $this->lang->line('login_heading');
 		
@@ -259,18 +256,18 @@ class Auth extends CI_Controller {
 
 			if(empty($identity)) {
 
-						if($this->config->item('identity', 'ion_auth') != 'email')
-						{
-							$this->ion_auth->set_error('forgot_password_identity_not_found');
-						}
-						else
-						{
-						   $this->ion_auth->set_error('forgot_password_email_not_found');
-						}
+	            		if($this->config->item('identity', 'ion_auth') != 'email')
+		            	{
+		            		$this->ion_auth->set_error('forgot_password_identity_not_found');
+		            	}
+		            	else
+		            	{
+		            	   $this->ion_auth->set_error('forgot_password_email_not_found');
+		            	}
 
-						$this->session->set_flashdata('message', $this->ion_auth->errors());
-						redirect("auth/forgot_password", 'refresh');
-					}
+		                $this->session->set_flashdata('message', $this->ion_auth->errors());
+                		redirect("auth/forgot_password", 'refresh');
+            		}
 
 			// run the forgotten password method to email an activation code to the user
 			$forgotten = $this->ion_auth->forgotten_password($identity->{$this->config->item('identity', 'ion_auth')});
