@@ -9,7 +9,7 @@ class Base_Controller extends CI_Controller {
         parent::__construct();
         
         // set Language
-        $siteLang = $this->sen->ssiouserdata('site_lang');
+        $siteLang = $this->session->userdata('site_lang');
         if ($siteLang) {
             $this->config->set_item('language', $siteLang);
         }
