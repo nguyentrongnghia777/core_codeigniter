@@ -18,7 +18,7 @@
 			<!-- small box -->
 			<div class="small-box bg-yellow">
 				<div class="inner">
-				  	<p><?= lang('category_add') ?></p>
+					<p><?= lang('category_add_cate') ?></p>
 				</div>
 				<a href="<?= base_url('admin/category/create') ?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
 			</div>

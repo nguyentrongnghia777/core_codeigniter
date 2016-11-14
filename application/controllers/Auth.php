@@ -16,6 +16,8 @@ class Auth extends CI_Controller {
     // redirect home if logged, otherwise redirect login
 	public function index()
 	{
+		// load language
+		$this->load->language('auth_lang');
 
 		if ($this->ion_auth->logged_in())
 		{
@@ -85,6 +87,9 @@ class Auth extends CI_Controller {
 			// redirect them to the login page
 			redirect('/admin/home');
 		}
+
+		// load language
+		$this->load->language('auth_lang');
 
 		$this->data['title'] = $this->lang->line('login_heading');
 		

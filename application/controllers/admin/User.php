@@ -48,9 +48,6 @@ class User extends Base_Controller {
 
 			$this->_render_page('admin/user/index', $this->data);
 		}
-
-		// load list user
-		$this->load->view('admin/user/index', $this->data);
 	}
 
 	// activate the user
