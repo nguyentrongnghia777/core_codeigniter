@@ -7,7 +7,7 @@
 			<div class="col-xs-12">
 				<div class="box box-info">
 		            <div class="box-header with-border">
-		              	<h3 class="box-title">Cập nhật danh mục sản phẩm</h3>
+		              	<h3 class="box-title"><?= lang('category_update_cate') ?></h3>
 		            </div>
             		<!-- /.box-header -->
 		            <!-- form start -->
@@ -15,23 +15,23 @@
 		            <form class="form-horizontal" action="" method="POST">
 		              	<div class="box-body">
 			                <div class="form-group">
-			                  	<label for="inputEmail3" class="col-sm-2 control-label">Tên danh mục :</label>
+			                  	<label for="inputEmail3" class="col-sm-2 control-label"><?= lang('category_name') ?> :</label>
 								<div class="col-sm-10">
-			                    	<input type="text" name="name" class="form-control" id="name" value="<?= $category->name ?>">
+			                    	<input type="text" name="name" class="form-control" id="name" value="<?= @$post['name'] ?>">
 			                    	<div name="name_error" class="clear error"><?php echo form_error('name'); ?></div>
 			                   	</div>   	
 			                 </div> 
 		                	<div class="form-group">
-		                  		<label for="inputPassword3" class="col-sm-2 control-label">Mô tả :</label>
+		                  		<label for="inputPassword3" class="col-sm-2 control-label"><?= lang('category_description') ?> :</label>
 								<div class="col-sm-10">
-		                    		<input type="text" name="discription" class="form-control" id="discription" value="<?= $category->discription?>">
+		                    		<input type="text" name="discription" class="form-control" id="discription" value="<?= @$post['discription'] ?>">
 		                    		<div name="name_error" class="clear error"><?php echo form_error('discription'); ?></div>
 		                    	</div>
 		                	</div>
 		              	</div>
 		              	<!-- /.box-body -->
 		              	<div class="box-footer">
-		                	<button type="submit" name="submit" class="btn btn-info pull-right">Cập nhật danh mục</button>
+		                	<button type="submit" name="submit" class="btn btn-info pull-right"><?= lang('category_update') ?></button>
 		              	</div>
 		              	<!-- /.box-footer -->
 		            </form>
