@@ -128,7 +128,7 @@ $lang['edit_group_validation_desc_label']  = 'Mô tả';
 // Change Password
 $lang['change_password_heading']                               = 'Đổi mật khẩu';
 $lang['change_password_old_password_label']                    = 'Mật khẩu cũ:';
-$lang['change_password_new_password_label']                    = 'Mật khẩu mới (ít nhất 8 ký tự):';
+$lang['change_password_new_password_label']                    = 'Mật khẩu mới (ít nhất %s ký tự):';
 $lang['change_password_new_password_confirm_label']            = 'Xác nhận mật khẩu mới:';
 $lang['change_password_submit_btn']                            = 'Lưu lại';
 $lang['change_password_validation_old_password_label']         = 'Mật khẩu cũ';
@@ -149,7 +149,7 @@ $lang['forgot_password_email_not_found']         = 'Địa chỉ email không t�
 
 // Reset Password
 $lang['reset_password_heading']                               = 'Đổi mật khẩu';
-$lang['reset_password_new_password_label']                    = 'Mật khẩu mới (ít nhất 8 ký tự):';
+$lang['reset_password_new_password_label']                    = 'Mật khẩu mới (ít nhất %s ký tự):';
 $lang['reset_password_new_password_confirm_label']            = 'Xác nhận mật khẩu mới:';
 $lang['reset_password_submit_btn']                            = 'Lưu lại';
 $lang['reset_password_validation_new_password_label']         = 'Mật khẩu mới';
