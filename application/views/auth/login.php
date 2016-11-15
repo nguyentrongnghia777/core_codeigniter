@@ -6,8 +6,8 @@
 	</div>
 	<!-- /.login-logo -->
 	<div class="login-box-body">
-		<div id="infoMessage" class="text-center color-information-form"><?= $message ?> </div>
 		<h1><?= lang('login_heading');?></h1>
+		<div id="infoMessage" class="text-center color-information-form"><?= $message ?></div>
 		<form action="" method="post">
 			<div class="form-group has-feedback">
 				<input type="email" class="form-control" placeholder="<?= lang('login_identity_label');?>" name="identity" value="">
@@ -22,15 +22,15 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-xs-8">
+				<div class="col-sm-8">
 					<div class="checkbox icheck">
 						<label>
-							<input type="checkbox"> <?= lang('login_remember_label');?>
+							<input type="checkbox">&nbsp;&nbsp;&nbsp;<?= lang('login_remember_label');?>
 						</label>
 					</div>
 				</div>
 				<!-- /.col -->
-				<div class="col-xs-4">
+				<div class="col-sm-4">
 					<button type="submit" name="submit" class="btn btn-primary btn-block btn-flat"><?= lang('login_submit_btn');?></button>
 				</div>
 				<!-- /.col -->

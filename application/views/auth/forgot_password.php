@@ -6,8 +6,7 @@
 	</div>
 	<div class="login-box-body">
 		<h1><?= lang('forgot_password_heading');?></h1>
-		<div id="infoMessage" class="text-center color-information-form"><?= $message ?> 
-		</div>
+		<div id="infoMessage" class="text-center color-information-form"><?= $message ?></div>
 		<form action="" method="post">
 			<input type="hidden" name="_token" value="HrxzRz7EzyXE7ODfpetHkSF7RVfLmignDYEeHPa9">
 			<div class="form-group has-feedback">
@@ -16,12 +15,8 @@
 				<div name="name_error" class="clear error"><?php echo form_error('identity'); ?></div>
 			</div>
 			<div class="row">
-				<div class="col-xs-2">
-				</div><!-- /.col -->
-				<div class="col-xs-8">
+				<div class="col-sm-offset-8 col-sm-4">
 					<button name="submit" type="submit" class="btn btn-primary btn-block btn-flat"><?= lang('forgot_password_submit_btn');?></button>
-				</div><!-- /.col -->
-				<div class="col-xs-2">
 				</div><!-- /.col -->
 			</div>
 		</form>

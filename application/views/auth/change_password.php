@@ -11,13 +11,13 @@
 		<form action="" method="post">
 			<div class="form-group has-feedback">
 				<input type="password" class="form-control" placeholder="<?= lang('change_password_old_password_label');?>" name="old" value="" id ="old">
-				<span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+				<span class="glyphicon glyphicon-lock form-control-feedback"></span>
 				<div name="name_error" class="clear error"><?php echo form_error('old'); ?>
 				</div>
 			</div>
 			<div class="form-group has-feedback">
 				<input type="password" class="form-control" placeholder="<?= sprintf(lang('change_password_new_password_label'), $min_password_length);?>" name="new" value="" id ="new" pattern="^.{8}.*$">
-				<span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+				<span class="glyphicon glyphicon-lock form-control-feedback"></span>
 				<div name="name_error" class="clear error"><?php echo form_error('new'); ?>
 				</div>
 			</div>

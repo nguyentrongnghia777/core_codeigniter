@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="<?= base_url('front-end/css/AdminLTE.min.css')?>">
     <!-- iCheck -->
     <link rel="stylesheet" href="<?= base_url('front-end/plugins/iCheck/square/blue.css')?>" >
+    <!-- common -->
+    <link rel="stylesheet" href="<?= base_url('front-end/css/common.css') ?>">
 
     </head>
     <body class="hold-transition login-page">
