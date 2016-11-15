@@ -16,6 +16,10 @@ class Category extends Base_Controller {
 	 */
 	public function index() {
 
+		// Loader
+		$this->load->language('category_lang');
+		$this->load->language('common_lang');
+
 		// Get list category
 		$list_cate = $this->category_q_model->get_list();
 		$data['list_cate'] = $list_cate;

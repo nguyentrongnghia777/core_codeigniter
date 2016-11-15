@@ -14,8 +14,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
         <!-- Ionicons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-        <!-- Theme style -->
-        <link rel="stylesheet" href="<?= base_url('front-end/css/AdminLTE.min.css') ?>">
         <!-- AdminLTE Skins. Choose a skin from the css/skins
         folder instead of downloading all of them to reduce the load. -->
         <link rel="stylesheet" href="<?= base_url('front-end/css/skins/_all-skins.min.css') ?>">
@@ -33,7 +31,7 @@
         <link rel="stylesheet" href="<?= base_url('front-end/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') ?>">
         <!-- bootstrap datatables -->
         <link rel="stylesheet" href="<?= base_url('front-end/plugins/datatables/dataTables.bootstrap.css') ?>">
-        <!-- bootstrap AdminLTE -->
+        <!-- bootstrap style AdminLTE -->
         <link rel="stylesheet" href="<?= base_url('front-end/css/AdminLTE.min.css') ?>">
         <link rel="stylesheet" href="<?= base_url('front-end/css/AdminLTE.css') ?>">
 
@@ -56,7 +54,7 @@
         <div class="wrapper">
             <header class="main-header">
             <!-- Logo -->
-                <a href="index2.html" class="logo">
+                <a href="<?= base_url('admin/home') ?>" class="logo">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
                     <span class="logo-mini"><b>A</b>LT</span>
                     <!-- logo for regular state and mobile devices -->
@@ -183,7 +181,7 @@
                                     <img src="<?= base_url('front-end/img/user2-160x160.jpg') ?>" class="img-circle" alt="User Image">
 
                                     <p>
-                                       - Web Developer
+                                       <?=$user->username ?>- Web Developer
                                       <small>Member since Nov. 2012</small>
                                     </p>
                                 </li>
@@ -231,14 +229,14 @@
                             <img src="<?= base_url('front-end/img/user2-160x160.jpg') ?>" class="img-circle" alt="User Image">
                         </div>
                         <div class="pull-left info">
-                            <p></p>
+                            <p><?=$user->username ?></p>
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
                     </div>
                     <!-- search form -->
                     <form action="#" method="get" class="sidebar-form">
                         <div class="input-group">
-                            <input type="text" name="q" class="form-control" placeholder="Search...">
+                            <input type="text" name="q" class="form-control" placeholder="<?= lang('common_search') ?>">
                             <span class="input-group-btn">
                                 <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
                             </span>
@@ -247,19 +245,9 @@
                     <!-- /.search form -->
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
-                        <li class="header">BẢNG ĐIỀU KHIỂN</li>
-                        <li class="active treeview">
-                            <a href="#">
-                                <i class="fa fa-dashboard"></i> <span>DANH MỤC SẢN PHẨM</span>
-                                <span class="pull-right-container">
-                                    <i class="fa fa-angle-left pull-right"></i>
-                                    <span class="label label-primary pull-right">2</span>
-                                </span>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="<?= base_url('admin/category') ?>"><i class="fa fa-circle-o"></i>Danh Mục</a></li>
-                                <li><a href="index2.html"><i class="fa fa-circle-o"></i>Sản Phẩm</a></li>
-                            </ul>
+                        <li class="header"><?= lang('category_control') ?></li>
+                        <li class="treeview">
+                            <a href="<?= base_url('admin/category') ?>"><i class="fa fa-dashboard"></i><?= lang('category_cate') ?></a>
                         </li>
                     </ul>
                 </section>
