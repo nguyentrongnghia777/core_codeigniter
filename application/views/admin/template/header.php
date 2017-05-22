@@ -252,6 +252,9 @@
                         <li class="treeview">
                             <a href="<?= base_url('admin/user') ?>"><i class="fa"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></i><?= lang('category_user') ?></a>
                         </li>
+                        <li class="treeview">
+                            <a href="<?= base_url('/blog') ?>"><i class="fa"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></i><?= lang('category_blog') ?></a>
+                        </li>
                     </ul>
                 </section>
                 <!-- /.sidebar -->
