@@ -33,7 +33,7 @@ $lang['login_forgot_password'] 		= 'Quên mật khẩu?';
 // Index
 $lang['index_heading']           = 'Tài khoản';
 $lang['index_subheading']        = 'Danh sách tài khoản.';
-$lang['index_fname_th']          = 'Tên';
+$lang['index_fname_th']          = 'Họ tên';
 $lang['index_lname_th']          = 'Họ';
 $lang['index_email_th']          = 'Email';
 $lang['index_groups_th']         = 'Nhóm';
@@ -54,10 +54,11 @@ $lang['deactivate_validation_confirm_label'] = 'Xác nhận';
 $lang['deactivate_validation_user_id_label'] = 'ID Tài khoản';
 
 // Create User
-$lang['create_user_heading']                           = 'Tạo tài khoản';
+$lang['create_user_heading']                           = 'Tạo tài khoản mới';
 $lang['create_user_subheading']                        = 'Vui lòng nhập các thông tin cần thiết sau.';
 $lang['create_user_username_label']                    = 'Tên tài khoản:';
 $lang['create_user_full_name_label']                   = 'Tên đầy đủ:';
+$lang['create_user_fname_label']                       = 'Tên:';
 $lang['create_user_lname_label']                       = 'Họ:';
 $lang['create_user_company_label']                     = 'Công ty:';
 $lang['create_user_email_label']                       = 'Email:';

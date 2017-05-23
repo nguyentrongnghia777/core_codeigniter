@@ -1,4 +1,4 @@
-<?php $this->load->view('template/header', ['title' => 'Page Blogs']) ?>
+<?php $this->load->view('admin/template/header', ['title' => 'Page Blogs']) ?>
 <div class="page-blogs">
     <div class="container">
         <p>
@@ -24,4 +24,4 @@
         <?php } ?> 
     </div>
 </div>
-<?php $this->load->view('template/footer') ?>
+<?php $this->load->view('admin/template/footer') ?>

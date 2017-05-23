@@ -139,8 +139,8 @@ class Ion_auth
 		if ( $this->ion_auth_model->forgotten_password($identity) )   //changed
 		{
 			// Get user information
-      $identifier = $this->ion_auth_model->identity_column; // use model identity column, so it can be overridden in a controller
-      $user = $this->where($identifier, $identity)->where('active', 1)->users()->row();  // changed to get_user_by_identity from email
+	  $identifier = $this->ion_auth_model->identity_column; // use model identity column, so it can be overridden in a controller
+	  $user = $this->where($identifier, $identity)->where('active', 1)->users()->row();  // changed to get_user_by_identity from email
 
 			if ($user)
 			{
@@ -360,7 +360,6 @@ class Ion_auth
 			else
 			{
 				$message = $this->load->view($this->config->item('email_templates', 'ion_auth').$this->config->item('email_activate', 'ion_auth'), $data, true);
-
 				$this->email->clear();
 				$this->email->from($this->config->item('admin_email', 'ion_auth'), $this->config->item('site_title', 'ion_auth'));
 				$this->email->to($email);
@@ -394,14 +393,14 @@ class Ion_auth
 
 		$identity = $this->config->item('identity', 'ion_auth');
 
-                if (substr(CI_VERSION, 0, 1) == '2')
+				if (substr(CI_VERSION, 0, 1) == '2')
 		{
 			$this->session->unset_userdata( array($identity => '', 'id' => '', 'user_id' => '') );
-                }
-                else
-                {
-                	$this->session->unset_userdata( array($identity, 'id', 'user_id') );
-                }
+				}
+				else
+				{
+					$this->session->unset_userdata( array($identity, 'id', 'user_id') );
+				}
 
 		// delete the remember me cookies if they exist
 		if (get_cookie($this->config->item('identity_cookie_name', 'ion_auth')))

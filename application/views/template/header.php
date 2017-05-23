@@ -29,7 +29,7 @@
                 </p>
                 <p>
                     <?php if ($user) { ?>
-                        <a href="<?=base_url('/profile/' . $user->username);?>">Xin Chào : <?= $user->full_name ? $user->full_name : $user->username; ?></a>
+                        <a href="<?=base_url('/profile/' . $user->username);?>">Wellcome : <?= $user->full_name ? $user->full_name : $user->username; ?></a>
                         <?php if ($this->ion_auth->is_admin()) { ?>
                          | <a href="<?=base_url('/admin/home');?>">Trang Quản Trị Admin</a> 
                         <?php } ?>
