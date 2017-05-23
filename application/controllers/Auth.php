@@ -44,7 +44,7 @@ class Auth extends Base_Controller {
 			// save cookie : sent newsletter for user
 			$remember = (bool) $this->input->post('remember');
 
-			if ($this->ion_auth->register($this->input->post('identity'), $this->input->post('password'), $remember))
+			if ($this->ion_auth->register($this->input->post('identity'), $this->input->post('password'), $this->input->post('identity'), $remember))
 			{
 				//if the login is successful
 				//redirect them back to the home page
