@@ -18,8 +18,10 @@
 $lang['error_csrf'] = 'Phát hiện truy vấn lạ. Vui lòng thực hiện lại thao tác.';
 
 //Register
-$lang['register_heading']      		= 'Đăng kí';
+$lang['register_heading']      			= 'Đăng ký';
 $lang['register_password_label']	   	= 'Mật khẩu nhập lại';
+$lang['register_newletter']				= 'Nhận thông báo qua email';
+$lang['register_submit_btn']     		= 'Đăng Ký';
 
 // Login
 $lang['login_heading']         		= 'Đăng nhập';
@@ -29,6 +31,10 @@ $lang['login_password_label']  		= 'Mật khẩu';
 $lang['login_remember_label']  		= 'Nhớ mật khẩu';
 $lang['login_submit_btn']      		= 'Đăng nhập';
 $lang['login_forgot_password'] 		= 'Quên mật khẩu?';
+$lang['login_by_fb'] 				= 'Đăng nhập bằng tài khoản Facebook';
+$lang['login_by_gg'] 				= 'Đăng nhập bằng tài khoản Google+';
+$lang['login_register']				= 'Đăng ký tài khoản mới';
+$lang['login_or']					= '- Hoặc -';
 
 // Index
 $lang['index_heading']           = 'Tài khoản';

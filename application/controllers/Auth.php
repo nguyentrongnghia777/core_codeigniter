@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Auth extends CI_Controller {
+class Auth extends Base_Controller {
 
 	public function __construct()
 	{
@@ -13,7 +13,7 @@ class Auth extends CI_Controller {
 		$this->lang->load('auth');
 	}
 
-    // redirect home if logged, otherwise redirect login
+	// redirect home if logged, otherwise redirect login
 	public function index()
 	{
 
@@ -118,7 +118,7 @@ class Auth extends CI_Controller {
 		{
 			// the user is not logging in so display the login page
 			// set the flash data error message if there is one
-			$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
+			$this->data['message'] = $this->session->flashdata('message');
 
 			$this->data['identity'] = array('name' => 'identity',
 				'id'    => 'identity',
@@ -165,7 +165,7 @@ class Auth extends CI_Controller {
 		{
 			// display the form
 			// set the flash data error message if there is one
-			$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
+			$this->data['message'] = $this->session->flashdata('message');
 
 			$this->data['min_password_length'] = $this->config->item('min_password_length', 'ion_auth');
 			$this->data['old_password'] = array(
@@ -246,7 +246,7 @@ class Auth extends CI_Controller {
 			}
 
 			// set any errors and display the form
-			$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
+			$this->data['message'] = $this->session->flashdata('message');
 			$this->_render_page('auth/forgot_password', $this->data);
 		}
 		else
@@ -256,18 +256,18 @@ class Auth extends CI_Controller {
 
 			if(empty($identity)) {
 
-	            		if($this->config->item('identity', 'ion_auth') != 'email')
-		            	{
-		            		$this->ion_auth->set_error('forgot_password_identity_not_found');
-		            	}
-		            	else
-		            	{
-		            	   $this->ion_auth->set_error('forgot_password_email_not_found');
-		            	}
+				if($this->config->item('identity', 'ion_auth') != 'email')
+				{
+					$this->ion_auth->set_error('forgot_password_identity_not_found');
+				}
+				else
+				{
+				   $this->ion_auth->set_error('forgot_password_email_not_found');
+				}
 
-		                $this->session->set_flashdata('message', $this->ion_auth->errors());
-                		redirect("auth/forgot_password", 'refresh');
-            		}
+				$this->session->set_flashdata('message', $this->ion_auth->errors());
+				redirect("auth/forgot_password", 'refresh');
+			}
 
 			// run the forgotten password method to email an activation code to the user
 			$forgotten = $this->ion_auth->forgotten_password($identity->{$this->config->item('identity', 'ion_auth')});
@@ -308,7 +308,7 @@ class Auth extends CI_Controller {
 				// display the form
 
 				// set the flash data error message if there is one
-				$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
+				$this->data['message'] = $this->session->flashdata('message');
 
 				$this->data['min_password_length'] = $this->config->item('min_password_length', 'ion_auth');
 				$this->data['new_password'] = array(

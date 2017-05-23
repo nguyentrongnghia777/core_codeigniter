@@ -20,14 +20,25 @@
 // Errors
 $lang['error_csrf'] = 'This form post did not pass our security checks.';
 
+//Register
+$lang['register_heading']      			= 'Register';
+$lang['register_password_label']	   	= 'Comfirm password';
+$lang['register_newletter']				= 'Recieve newletter';
+$lang['register_submit_btn']     		= 'Register';
+
 // Login
-$lang['login_heading']         = 'Login';
-$lang['login_subheading']      = 'Please login with your email/username and password below.';
-$lang['login_identity_label']  = 'Email/Username:';
-$lang['login_password_label']  = 'Password:';
-$lang['login_remember_label']  = 'Remember Me:';
-$lang['login_submit_btn']      = 'Login';
-$lang['login_forgot_password'] = 'Forgot your password?';
+$lang['login_heading']        	= 'Login';
+$lang['login_subheading']     	= 'Please login with your email/username and password below.';
+$lang['login_identity_label'] 	= 'Email/Username:';
+$lang['login_password_label'] 	= 'Password:';
+$lang['login_remember_label'] 	= 'Remember Me:';
+$lang['login_submit_btn']     	= 'Login';
+$lang['login_forgot_password']	= 'Forgot your password?';
+$lang['login_by_fb']			= 'Sign in using Facebook';
+$lang['login_by_gg']			= 'Sign in using Google+';
+$lang['login_register']			= 'Register a new membership';
+$lang['login_or']				= '- OR -';
+
 
 // Index
 $lang['index_heading']           = 'Users';

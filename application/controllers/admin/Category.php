@@ -4,7 +4,7 @@ class Category extends Base_Controller {
 
 	public function __construct()
 	{
-		parent :: __construct();
+		parent:: __construct();
 
 		// Load model
 		$this->load->model('dal/category_q_model');
